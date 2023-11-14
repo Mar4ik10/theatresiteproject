@@ -1,8 +1,508 @@
-p {
-  color: aqua;
+body {
+  background: #0e0d0b;
 }
 
-h1 {
-  background-color: brown;
-  color: blueviolet;
+@font-face {
+  font-family: "Alethia Next";
+  src: url("AlethiaNext-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("centurygothic.ttf") format("truetype");
+  font-weight: 400;
+}
+
+.component-8 {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 80px;
+  margin-right: 80px;
+  width: auto;
+  height: 76px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.component-1 {
+  display: flex;
+  width: 40px;
+  height: 23px;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.component-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 76px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.frame-2 {
+  width: 1220px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.text1 {
+  color: var(--white, #fff);
+  font-family: Century Gothic;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.text2 {
+  color: var(--white, #fff);
+  font-family: Century Gothic;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  background: #000000;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+form:hover,
+form:valid {
+  width: 200px;
+  cursor: pointer;
+}
+
+form:hover input,
+form:valid input {
+  display: block;
+}
+
+form:hover .fa,
+form:valid .fa {
+  background: #b5a48d;
+  color: white;
+}
+
+.nav-icon {
+  position: absolute;
+  cursor: pointer;
+}
+
+.nav-icon:before,
+.nav-icon:after {
+  position: absolute;
+  left: 17px;
+  top: 0px;
+  content: " ";
+  height: 38px;
+  width: 2px;
+
+  background-color: #ffffff;
+}
+.nav-icon:before {
+  transform: rotate(90deg);
+}
+.nav-icon:after {
+  transform: rotate(-90deg);
+  margin-top: 10px;
+}
+
+.nav-icon:hover:before,
+.nav-icon:hover:after {
+  background-color: #b5a48d;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  background-color: #111;
+  overflow-x: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #eeeaea;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  background-color: #ffffff;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.close:hover:before,
+.close:hover:after {
+  background-color: #b5a48d;
+}
+
+/*.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}*/
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.frame-21 {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  margin-right: 40px;
+  margin-left: 80px;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+}
+
+.text5 {
+  margin-top: 50px;
+  font-family: Century Gothic;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #b5a48d;
+}
+
+.frame-21-2 {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: auto;
+  margin-right: 40px;
+  margin-left: 46px;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+}
+
+.frame-19 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.component-14,
+.component-15,
+.component-16,
+.component-17,
+.component-18 {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: Hug (40px);
+  margin-top: auto;
+  margin-left: 0;
+}
+
+.component-14:hover .text7,
+.component-14:hover .text6,
+.component-15:hover .text7,
+.component-15:hover .text6,
+.component-16:hover .text7,
+.component-16:hover .text6,
+.component-17:hover .text7,
+.component-17:hover .text6,
+.component-18:hover .text7,
+.component-18:hover .text6 {
+  color: #b5a48d;
+}
+
+.component-14:hover .text7,
+.component-15:hover .text7,
+.component-16:hover .text7,
+.component-17:hover .text7,
+.component-18:hover .text7 {
+  font-size: 79px;
+}
+
+.text6 {
+  width: 38px;
+  height: 29px;
+  font-family: Century Gothic;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  color: #ffffff;
+}
+
+.text7 {
+  width: 325px;
+  height: 56px;
+  font-family: "Alethia Next";
+  font-size: 80px;
+  font-weight: 100;
+  letter-spacing: 10px;
+  line-height: 0px;
+  letter-spacing: 0em;
+  white-space: nowrap;
+  text-align: left;
+  margin-left: 80px;
+  color: #ffffff;
+}
+
+.footerLines {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 191px;
+  background-color: rgba(222, 19, 19, 0);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 180px;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.component-9 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 147px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.line {
+  display: flex;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  background-color: #b5a48d;
+}
+
+.frame-66 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 79px;
+  height: auto;
+  margin-bottom: 20px;
+  position: relative;
+  margin-left: 80px;
+  margin-top: 32px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.frame-67 {
+  background-color: rgba(0, 0, 0, 0);
+  width: 156px;
+  height: 76px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.frame-68 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+  width: 79px;
+  height: auto;
+  margin-bottom: 20px;
+  position: relative;
+  margin-right: 80px;
+  margin-top: 32px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.text3 {
+  color: var(--white, #fff);
+  font-family: Century Gothic;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+.text4 {
+  color: var(--white, #fff);
+  font-family: Century Gothic;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.frame-66 p {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-family: Satoshi;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.frame-66 a {
+  line-height: 1;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: Century Gothic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #b5a48d;
+}
+
+.frame-68 a {
+  line-height: 1;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: Century Gothic;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #b5a48d;
+}
+
+.frame-35 {
+  width: auto;
+  height: 20px;
+  margin-bottom: 30px;
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.frame-35 p {
+  font-family: Century Gothic;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+
+.frame-35 .left {
+  margin-right: auto;
+}
+
+.frame-35 .right-container {
+  display: flex;
+  align-items: center;
+}
+
+.frame-35 .right {
+  margin-left: 10px;
+  margin-right: auto;
 }

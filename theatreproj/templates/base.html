@@ -5,13 +5,122 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Theatre of Titans</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles.css'%}" />
   </head>
   <body>
     <header>
-      <p>Hello people!!!!</p>
+      <div class="component-8">
+        <div class="component-1">
+          <div id="mySidenav" class="sidenav">
+            <div class="frame-21">
+              <div class="button">
+                <a href="#" class="close" onclick="closeNav()"></a>
+              </div>
+              <div class="text5">Меню</div>
+            </div>
+            <div class="frame-21-2">
+              <div class="frame-19">
+                <a href="#" class="component-14">
+                  <div class="text6">01/</div>
+                  <div class="text7">Головна</div>
+                </a>
+                <a href="#" class="component-15">
+                  <div class="text6">02/</div>
+                  <div class="text7">Афіша</div>
+                </a>
+                <a href="#" class="component-16">
+                  <div class="text6">03/</div>
+                  <div class="text7">Про театр</div>
+                </a>
+                <a href="#" class="component-17">
+                  <div class="text6">04/</div>
+                  <div class="text7">Новини</div>
+                </a>
+                <a href="#" class="component-18">
+                  <div class="text6">05/</div>
+                  <div class="text7">Контакти</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-icon" onclick="openNav()"></div>
+          <script>
+            function openNav() {
+              var sidenav = document.getElementById("mySidenav");
+              var main = document.getElementById("main");
+
+              if (sidenav.style.width === "0px" || sidenav.style.width === "") {
+                sidenav.style.width = "50%";
+                main.style.marginLeft = "50%";
+              } else {
+                sidenav.style.width = "0";
+                main.style.marginLeft = "0";
+              }
+            }
+
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft = "0";
+            }
+          </script>
+        </div>
+
+        <div class="frame-2">
+          <div class="text1">Театр Титанів</div>
+          <div class="text2">Київ | 1918</div>
+        </div>
+
+        <div class="component-2">
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+            integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+            crossorigin="anonymous"
+          />
+          <form action="">
+            <input type="search" required />
+            <i class="fa fa-search"></i>
+          </form>
+        </div>
+      </div>
     </header>
-    <main>{% block main %}{% endblock %}</main>
-    <footer><h1>FOOTER</h1></footer>
+
+    <!--<main>{% block main %}{% endblock %}</main>-->
+
+    <footer>
+      <div class="footerLines">
+        <div class="line"></div>
+        <div class="footer">
+          <div class="component-9">
+            <div class="frame-66">
+              <a href="#">Головна</a>
+              <a href="#">Афіша</a>
+              <a href="#">Про Театр</a>
+              <a href="#">Новини</a>
+              <a href="#">Контакти</a>
+            </div>
+            <div class="frame-67">
+              <div class="text3">Театр Титанів</div>
+              <div class="text3">Київ | 1918</div>
+            </div>
+            <div class="frame-68">
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">WhatsApp</a>
+              <a href="#">YouTube</a>
+              <a href="#">X</a>
+            </div>
+          </div>
+
+          <div class="frame-35">
+            <p class="left">©2023 Театр Титанів. Всі права захищені.</p>
+            <div class="right-container">
+              <p>Privacy</p>
+              <p class="right">Cookies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
