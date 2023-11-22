@@ -642,4 +642,304 @@ iframe {
 
 
 
+  .text-35 {
+    font-family: Alethia Next;
+    font-size: 48px;
+    font-weight: 350;
+    line-height: 70px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #B5A48D;
+    }
+
+  .mainFrame {
+      width: 100%; 
+      height: 3441px; 
+      display: flex;
+  }
+  
+  .centralFrame {
+      flex-basis: 1px;
+      margin-right: 8px;
+      height: 3441px; 
+      background: #B5A48D;
+      position: relative;
+  }
+
+  .rightFrame {
+    flex: 1;
+    height: 3441px; 
+    align-content: center;
+  }
+
+  .leftFrame {
+    flex: 1;
+    height: 3441px; 
+  }
+
+  
+  .frame-164 {
+    display: flex;
+    flex-direction: row;
+    width: 135px;
+    height: 28px;
+    margin-left: 40%;
+    }
+
+  .circle1 {
+    width: 24px;
+    height: 24px;
+    background-color: #B5A48D;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px; /* Початкова позиція від верху */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle2 {
+  width: 24px;
+  height: 24px;
+  background-color: #B5A48D;
+  border-radius: 50%;
+  position: absolute;
+  top: 550px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle3 {
+  width: 24px;
+  height: 24px;
+  background-color: #B5A48D;
+  border-radius: 50%;
+  position: absolute;
+  top: 830px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle4 {
+  width: 24px;
+  height: 24px;
+  background-color: #B5A48D;
+  border-radius: 50%;
+  position: absolute;
+  top: 1220px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle5 {
+  width: 24px;
+  height: 24px;
+  background-color: #B5A48D;
+  border-radius: 50%;
+  position: absolute;
+  top: 1628px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle6 {
+  width: 24px;
+  height: 24px;
+  background-color: #B5A48D;
+  border-radius: 50%;
+  position: absolute;
+  top: 1940px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle7 {
+  width: 24px;
+  height: 24px;
+  background-color: #B5A48D;
+  border-radius: 50%;
+  position: absolute;
+  top: 2420px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+.part1 {
+  margin-right: 30px;
+  margin-top: 17px;
+}
+
+.part2 {
+  margin-right: 30px;
+  margin-top: 50px;
+}
+
+.part3 {
+  margin-right: 30px;
+  margin-top: 50px;
+}
+
+.part4 {
+  margin-right: 30px;
+  margin-top: 50px;
+}
+
+.text-years {
+  font-family: Alethia Next;
+  font-size: 40px;
+  font-weight: 350;
+  line-height: 58px;
+  text-align: right;
+  color: #B5A48D;
+}
+
+.text-caption {
+  font-family: Alethia Next;
+  font-size: 28px;
+  font-weight: 350;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: right;
+  margin-right: 90px;
+  color: #B5A48D;
+}
+
+.text-descrip {
+  font-family: Century Gothic;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: justify;
+  margin-right: 90px;
+  margin-left: 160px;
+  margin-top: 20px;
+  color: #FFFFFF;
+}
+
+.image1 {
+  width: 468px;
+  height: 472px;
+  margin-top: 40px;
+}
+
+
+.part5 {
+  margin-left: 30px;
+}
+
+.part5_1{
+  display: flex;
+  flex-direction: row;
+}
+
+.part6 {
+  margin-top: 70px;
+  margin-left: 30px;
+}
+
+.part6_1{
+  display: flex;
+  flex-direction: row;
+}
+
+.part7 {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.part7_1{
+  display: flex;
+  flex-direction: row;
+}
+
+.part8 {
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.part8_1{
+  display: flex;
+  flex-direction: row;
+}
+
+.text-years2 {
+  font-family: Alethia Next;
+  font-size: 40px;
+  font-weight: 350;
+  line-height: 58px;
+  text-align: left;
+  color: #B5A48D;
+}
+
+.text-caption2 {
+  font-family: Alethia Next;
+  font-size: 28px;
+  font-weight: 350;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 90px;
+  color: #B5A48D;
+}
+
+.text-descrip2 {
+  font-family: Century Gothic;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: justify;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-top: 20px;
+  color: #FFFFFF;
+}
+
+.text-descrip3 {
+  font-family: Century Gothic;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: justify;
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-top: 350px;
+  color: #FFFFFF;
+}
+
+.text-descrip4 {
+  font-family: Century Gothic;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: justify;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-top: 30px;
+  color: #FFFFFF;
+}
+
+
+.image5 {
+  margin-top: 40px;
+}
+
+.image6 {
+  margin-top: 40px;
+  margin-left: auto;
+}
+
+.image7 {
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+.image8 {
+  margin-top: 40px;
+  margin-left: auto;
+}
+
+
+
 

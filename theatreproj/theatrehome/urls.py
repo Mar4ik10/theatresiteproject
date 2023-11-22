@@ -5,5 +5,6 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("contact/", views.contact, name="contact")
+    path("contact/", views.contact, name="contact"),
+    path("abouttheatre/", views.abouttheatre, name="abouttheatre"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

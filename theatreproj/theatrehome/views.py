@@ -7,3 +7,6 @@ def index(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+def abouttheatre(request):
+    return render(request, "abouttheatre.html")
