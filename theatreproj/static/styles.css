@@ -337,39 +337,35 @@ form:valid .fa {
 
 .footerLines {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  height: 191px;
   background-color: rgba(222, 19, 19, 0);
-  position: fixed;
-  bottom: 0;
-  left: 0;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 180px;
   background-color: rgba(0, 0, 0, 0);
-  position: fixed;
-  bottom: 0;
-  left: 0;
 }
 
 .component-9 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 147px;
   background-color: rgba(0, 0, 0, 0);
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #b5a48d;
 }
 
 .line {
   display: flex;
   width: 100%;
   height: 1px;
-  bottom: 0;
   background-color: #b5a48d;
 }
 
@@ -507,19 +503,13 @@ form:valid .fa {
   margin-right: auto;
 }
 
-
-
-
-
-
-
 .frame-65 {
-display: flex;
-flex-direction: row;
-margin-top: 50px;
-margin-bottom: 48px;
-margin-left: 100px;
-margin-right: 100px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 48px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 .group-3 {
@@ -542,7 +532,7 @@ iframe {
   height: 300px;
   margin-left: auto;
   gap: 60px;
-  }
+}
 
 .text8 {
   width: 226px;
@@ -556,7 +546,7 @@ iframe {
   letter-spacing: 0em;
   text-align: left;
   color: #b5a48d;
-  }
+}
 
 .frame-63 {
   display: flex;
@@ -564,21 +554,21 @@ iframe {
   width: 570px;
   height: 206px;
   gap: 48px;
-  }
+}
 
 .frame-61 {
   display: flex;
   flex-direction: row;
   width: 570px;
   height: 120px;
-  }
+}
 
 .frame-62 {
   display: flex;
   flex-direction: row;
   width: 570px;
   height: 95px;
-  }  
+}
 
 .frame-57 {
   display: flex;
@@ -587,7 +577,7 @@ iframe {
   width: 312px;
   height: 90px;
   gap: 12px;
-  }
+}
 
 .text9 {
   width: 83px;
@@ -598,9 +588,9 @@ iframe {
   white-space: nowrap;
   line-height: 32px;
   letter-spacing: 0em;
-  text-align: left;  
+  text-align: left;
   color: #b5a48d;
-  }
+}
 
 .text10 {
   width: 312px;
@@ -612,7 +602,7 @@ iframe {
   letter-spacing: 0em;
   text-align: left;
   color: #ffffff;
-  }
+}
 
 .frame-58 {
   display: flex;
@@ -621,7 +611,7 @@ iframe {
   height: 90px;
   gap: 12px;
   margin-left: auto;
-  }
+}
 
 .frame-59 {
   display: flex;
@@ -629,7 +619,7 @@ iframe {
   width: 312px;
   height: 80px;
   margin-left: 40px;
-  }
+}
 
 .frame-60 {
   display: flex;
@@ -637,70 +627,66 @@ iframe {
   width: 190px;
   height: 90px;
   margin-left: auto;
-  }
+}
 
+.text-35 {
+  font-family: Alethia Next;
+  font-size: 48px;
+  font-weight: 350;
+  line-height: 70px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #b5a48d;
+}
 
+.mainFrame {
+  width: 100%;
+  height: 3441px;
+  display: flex;
+}
 
+.centralFrame {
+  flex-basis: 1px;
+  margin-right: 8px;
+  height: 3441px;
+  background: #b5a48d;
+  position: relative;
+}
 
-  .text-35 {
-    font-family: Alethia Next;
-    font-size: 48px;
-    font-weight: 350;
-    line-height: 70px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #B5A48D;
-    }
+.rightFrame {
+  flex: 1;
+  height: 3441px;
+  align-content: center;
+}
 
-  .mainFrame {
-      width: 100%; 
-      height: 3441px; 
-      display: flex;
-  }
-  
-  .centralFrame {
-      flex-basis: 1px;
-      margin-right: 8px;
-      height: 3441px; 
-      background: #B5A48D;
-      position: relative;
-  }
+.leftFrame {
+  flex: 1;
+  height: 3441px;
+}
 
-  .rightFrame {
-    flex: 1;
-    height: 3441px; 
-    align-content: center;
-  }
+.frame-164 {
+  display: flex;
+  flex-direction: row;
+  width: 135px;
+  height: 28px;
+  margin-left: 40%;
+}
 
-  .leftFrame {
-    flex: 1;
-    height: 3441px; 
-  }
-
-  
-  .frame-164 {
-    display: flex;
-    flex-direction: row;
-    width: 135px;
-    height: 28px;
-    margin-left: 40%;
-    }
-
-  .circle1 {
-    width: 24px;
-    height: 24px;
-    background-color: #B5A48D;
-    border-radius: 50%;
-    position: absolute;
-    top: 30px; /* Початкова позиція від верху */
-    left: 50%;
-    transform: translateX(-50%);
+.circle1 {
+  width: 24px;
+  height: 24px;
+  background-color: #b5a48d;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px; /* Початкова позиція від верху */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .circle2 {
   width: 24px;
   height: 24px;
-  background-color: #B5A48D;
+  background-color: #b5a48d;
   border-radius: 50%;
   position: absolute;
   top: 550px;
@@ -711,7 +697,7 @@ iframe {
 .circle3 {
   width: 24px;
   height: 24px;
-  background-color: #B5A48D;
+  background-color: #b5a48d;
   border-radius: 50%;
   position: absolute;
   top: 830px;
@@ -722,7 +708,7 @@ iframe {
 .circle4 {
   width: 24px;
   height: 24px;
-  background-color: #B5A48D;
+  background-color: #b5a48d;
   border-radius: 50%;
   position: absolute;
   top: 1220px;
@@ -733,7 +719,7 @@ iframe {
 .circle5 {
   width: 24px;
   height: 24px;
-  background-color: #B5A48D;
+  background-color: #b5a48d;
   border-radius: 50%;
   position: absolute;
   top: 1628px;
@@ -744,7 +730,7 @@ iframe {
 .circle6 {
   width: 24px;
   height: 24px;
-  background-color: #B5A48D;
+  background-color: #b5a48d;
   border-radius: 50%;
   position: absolute;
   top: 1940px;
@@ -755,15 +741,13 @@ iframe {
 .circle7 {
   width: 24px;
   height: 24px;
-  background-color: #B5A48D;
+  background-color: #b5a48d;
   border-radius: 50%;
   position: absolute;
   top: 2420px;
   left: 50%;
   transform: translateX(-50%);
 }
-
-
 
 .part1 {
   margin-right: 30px;
@@ -791,7 +775,7 @@ iframe {
   font-weight: 350;
   line-height: 58px;
   text-align: right;
-  color: #B5A48D;
+  color: #b5a48d;
 }
 
 .text-caption {
@@ -802,7 +786,7 @@ iframe {
   letter-spacing: 0em;
   text-align: right;
   margin-right: 90px;
-  color: #B5A48D;
+  color: #b5a48d;
 }
 
 .text-descrip {
@@ -815,7 +799,7 @@ iframe {
   margin-right: 90px;
   margin-left: 160px;
   margin-top: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .image1 {
@@ -824,12 +808,11 @@ iframe {
   margin-top: 40px;
 }
 
-
 .part5 {
   margin-left: 30px;
 }
 
-.part5_1{
+.part5_1 {
   display: flex;
   flex-direction: row;
 }
@@ -839,7 +822,7 @@ iframe {
   margin-left: 30px;
 }
 
-.part6_1{
+.part6_1 {
   display: flex;
   flex-direction: row;
 }
@@ -849,7 +832,7 @@ iframe {
   margin-left: 30px;
 }
 
-.part7_1{
+.part7_1 {
   display: flex;
   flex-direction: row;
 }
@@ -859,7 +842,7 @@ iframe {
   margin-left: 30px;
 }
 
-.part8_1{
+.part8_1 {
   display: flex;
   flex-direction: row;
 }
@@ -870,7 +853,7 @@ iframe {
   font-weight: 350;
   line-height: 58px;
   text-align: left;
-  color: #B5A48D;
+  color: #b5a48d;
 }
 
 .text-caption2 {
@@ -881,7 +864,7 @@ iframe {
   letter-spacing: 0em;
   text-align: left;
   margin-left: 90px;
-  color: #B5A48D;
+  color: #b5a48d;
 }
 
 .text-descrip2 {
@@ -893,7 +876,7 @@ iframe {
   margin-left: 90px;
   margin-right: 90px;
   margin-top: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .text-descrip3 {
@@ -905,7 +888,7 @@ iframe {
   margin-left: 40px;
   margin-right: 20px;
   margin-top: 350px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .text-descrip4 {
@@ -917,9 +900,8 @@ iframe {
   margin-left: 90px;
   margin-right: 90px;
   margin-top: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-
 
 .image5 {
   margin-top: 40px;
@@ -939,7 +921,3 @@ iframe {
   margin-top: 40px;
   margin-left: auto;
 }
-
-
-
-
