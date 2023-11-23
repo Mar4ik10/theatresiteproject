@@ -335,17 +335,25 @@ form:valid .fa {
   color: #ffffff;
 }
 
+
+/*--------------------------footer-------------------------------*/
+
 .footerLines {
+  bottom: 0;
+  right: 0;
+  margin-left: 0px;
+  margin-right: 0px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: rgba(222, 19, 19, 0);
+  height: 182px;
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 180px;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -353,6 +361,7 @@ form:valid .fa {
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 147px;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -503,20 +512,25 @@ form:valid .fa {
   margin-right: auto;
 }
 
+
+/*--------------------------contacts-------------------------------*/
+
+
 .frame-65 {
   display: flex;
   flex-direction: row;
-  margin-top: 50px;
-  margin-bottom: 48px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%; 
+  margin-right: 10%;
+  width: 80%; 
+  height: auto;
 }
 
 .group-3 {
   width: 620px;
   height: 300px;
   border-radius: 4px;
-  background-color: #b5a48d;
   margin-right: 20px;
 }
 
@@ -529,8 +543,10 @@ iframe {
   display: flex;
   flex-direction: column;
   width: 570px;
-  height: 300px;
+  height: 41vh;
   margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   gap: 60px;
 }
 
@@ -629,6 +645,10 @@ iframe {
   margin-left: auto;
 }
 
+
+/*--------------------------about_theatre-------------------------------*/
+
+
 .text-35 {
   font-family: Alethia Next;
   font-size: 48px;
@@ -637,18 +657,20 @@ iframe {
   letter-spacing: 0em;
   text-align: center;
   color: #b5a48d;
+  margin-top: 20px;
 }
 
 .mainFrame {
   width: 100%;
-  height: 3441px;
+  height: 3220px;
   display: flex;
+  margin-top: 20px;
 }
 
 .centralFrame {
   flex-basis: 1px;
   margin-right: 8px;
-  height: 3441px;
+  height: 3220px;
   background: #b5a48d;
   position: relative;
 }
