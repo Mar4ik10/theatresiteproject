@@ -10,3 +10,6 @@ def contact(request):
 
 def abouttheatre(request):
     return render(request, "abouttheatre.html")
+
+def selectTickets(request):
+    return render(request, "selectTickets.html")
