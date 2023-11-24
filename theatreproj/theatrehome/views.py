@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from . import models
 
 # Create your views here.
 
@@ -11,5 +12,9 @@ def contact(request):
 def abouttheatre(request):
     return render(request, "abouttheatre.html")
 
-def selectTickets(request):
-    return render(request, "selectTickets.html")
+def selectTickets(request, show_id):
+    theatshow = models.TheatreShow.objects.get(pk=show_id)
+    
+    return render(request, "selectTickets.html", {
+        "theatre": theatshow
+    })
