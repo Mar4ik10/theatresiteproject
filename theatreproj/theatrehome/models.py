@@ -5,7 +5,7 @@ from django.utils import timezone
 
 class TheatreShow(models.Model):
     title = models.CharField(max_length=255)
-    image = models.ImageField(upload_to="public/theatreimages/")
+    image = models.ImageField(upload_to="public/theatreimages")
     genre = models.CharField(max_length=100)
 
     SCENES_CHOICES = [
