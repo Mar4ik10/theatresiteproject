@@ -1,0 +1,34 @@
+{% extends "base.html" %}{% load static %}{% block main %}
+<div class="main-afisha">
+  <div class="row1-afisha">
+    <h1 class="header-afisha">Афіша</h1>
+    <h2 class="season-afisha">106 сезон</h2>
+  </div>
+  <div class="line-container-afisha"><div class="line"></div></div>
+
+  <section class="card-section-afisha">
+    {% for show in theatre %}
+    <div class="card-afisha">
+      <div class="card-image-afisha">
+        <img src="/{{ show.image }}" alt="" />
+      </div>
+      <div class="details-card-afisha">
+        <p class="date-afisha">
+          {{ show.formatted_date }} | {{ show.formatted_time }}
+        </p>
+        <p class="genres-afisha">
+          {{ show.genre}} | {{ show.typescene }} | {{ show.num_scene }} дія
+        </p>
+        <p class="author-afisha">{{ show.author }}</p>
+        <p class="title-afisha">{{ show.title }}</p>
+      </div>
+      <a href="{% url 'selectTickets' show_id=show.id %}">КУПИТИ КВИТОК</a>
+      <!-- <div class="button-afisha">
+        <a href="{% url 'selectTickets' show_id=show.id %}">КУПИТИ КВИТОК</a>
+      </div> -->
+    </div>
+    {% endfor %}
+  </section>
+</div>
+
+{% endblock %}
