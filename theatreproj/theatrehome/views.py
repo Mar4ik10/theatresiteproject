@@ -21,7 +21,7 @@ def selectTickets(request, show_id):
     })
 
 def afisha(request):
-    if request.method == "GET":
-        theatshowall = models.TheatreShow.objects.all()
+    theatshowall = models.TheatreShow.objects.all()
+        
     
     return render(request, "afisha.html", {"theatre": theatshowall})

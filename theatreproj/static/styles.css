@@ -1454,7 +1454,66 @@ iframe {
   color: #b5a48d;
 }
 
+.card-section-afisha {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
 .card-afisha {
   font-family: Alethia Next;
   color: #b5a48d;
+  border: #eeeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  outline: #b5a48d solid 1px;
+  margin: 20px 30px;
+  width: 20rem;
+}
+
+.card-image-afisha img {
+  width: 100%;
+  height: auto;
+}
+
+.details-card-afisha {
+  margin: 5px 20px;
+  display: block;
+}
+
+.date-afisha,
+.genres-afisha,
+.title-afisha {
+  color: white;
+  margin: 0px 0px 10px 0px;
+  font-size: 12px;
+}
+
+.date-afisha {
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.genre-afisha {
+  font-size: 10px;
+}
+
+.title-afisha {
+  margin-top: 20px;
+  font-weight: 350;
+  line-height: 1.2rem;
+  font-size: 1rem;
+}
+
+.card-afisha a {
+  text-decoration: none;
+  color: white;
+  margin-top: auto;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  outline: #b5a48d solid 1px;
 }
