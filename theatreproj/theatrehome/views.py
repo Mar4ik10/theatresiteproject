@@ -4,6 +4,7 @@ from . import models
 # Create your views here.
 
 def index(request):
+    theatshowall = models.TheatreShow.objects.all()
     return render(request, "index.html")
 
 def contact(request):
@@ -18,3 +19,8 @@ def selectTickets(request, show_id):
     return render(request, "selectTickets.html", {
         "theatre": theatshow
     })
+
+def afisha(request):
+    theatshowall = models.TheatreShow.objects.all()
+    
+    return render(request, "afisha.html", {"theaters": theatshowall})
