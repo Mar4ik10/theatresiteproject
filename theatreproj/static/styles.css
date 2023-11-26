@@ -1,3 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 body {
   background: #0e0d0b;
 }
@@ -72,7 +78,6 @@ body {
   line-height: normal;
 }
 
-
 .component-2 form {
   position: absolute;
   top: 50%;
@@ -103,7 +108,7 @@ body {
   padding: 0 20px;
 }
 
-.fa {
+.component-2 .fa {
   box-sizing: border-box;
   padding: 10px;
   width: 42.5px;
@@ -119,19 +124,19 @@ body {
   transition: all 1s;
 }
 
-form:hover,
-form:valid {
+.component-2 form:hover,
+.component-2 form:valid {
   width: 200px;
   cursor: pointer;
 }
 
-form:hover input,
-form:valid input {
+.component-2 form:hover input,
+.component-2 form:valid input {
   display: block;
 }
 
-form:hover .fa,
-form:valid .fa {
+.component-2 form:hover .fa,
+.component-2 form:valid .fa {
   background: #b5a48d;
   color: white;
 }
@@ -337,7 +342,6 @@ form:valid .fa {
   color: #ffffff;
 }
 
-
 /*--------------------------footer-------------------------------*/
 
 .footerLines {
@@ -514,18 +518,16 @@ form:valid .fa {
   margin-right: auto;
 }
 
-
 /*--------------------------contacts-------------------------------*/
-
 
 .frame-65 {
   display: flex;
   flex-direction: row;
   margin-top: 5%;
   margin-bottom: 5%;
-  margin-left: 10%; 
+  margin-left: 10%;
   margin-right: 10%;
-  width: 80%; 
+  width: 80%;
   height: auto;
 }
 
@@ -647,9 +649,7 @@ iframe {
   margin-left: auto;
 }
 
-
 /*--------------------------about_theatre-------------------------------*/
-
 
 .text-35 {
   font-family: Alethia Next;
@@ -946,10 +946,9 @@ iframe {
   margin-left: auto;
 }
 
-
 /*--------------------------select_tickets-------------------------------*/
 
-.text-tickets{
+.text-tickets {
   width: 531px;
   height: 86px;
   font-family: Alethia Next;
@@ -961,7 +960,7 @@ iframe {
   margin-top: 30px;
   margin-right: auto;
   margin-left: auto;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .frame-134 {
@@ -981,7 +980,7 @@ iframe {
   gap: 20px;
 }
 
-.date{
+.date {
   width: 265px;
   height: 11px;
   font-family: Century Gothic;
@@ -991,10 +990,10 @@ iframe {
   letter-spacing: 0em;
   text-align: left;
   white-space: nowrap;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.genre{
+.genre {
   width: 286px;
   height: 11px;
   font-family: Century Gothic;
@@ -1004,10 +1003,10 @@ iframe {
   letter-spacing: 0em;
   text-align: left;
   white-space: nowrap;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.author{
+.author {
   width: 265px;
   height: 11px;
   font-family: Century Gothic;
@@ -1017,7 +1016,7 @@ iframe {
   letter-spacing: 0em;
   text-align: left;
   white-space: nowrap;
-  color: #B5A48D;
+  color: #b5a48d;
 }
 
 .group-10 {
@@ -1035,7 +1034,7 @@ iframe {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #B5A48D;
+  background-color: #b5a48d;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -1046,10 +1045,10 @@ iframe {
   height: 12px;
   border-radius: 50%;
   background-color: #000;
-  top: 50%; 
+  top: 50%;
   transform: translateY(-50%);
   left: calc(50% - 100px);
-  background-color: #B5A48D;
+  background-color: #b5a48d;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1072,7 +1071,7 @@ iframe {
 }
 
 .text {
-  color: #B5A48D;
+  color: #b5a48d;
   font-size: 12px;
   margin-top: 40px;
   white-space: nowrap;
@@ -1111,7 +1110,11 @@ iframe {
   margin-bottom: 20px;
 }
 
-.coast1, .coast2, .coast3, .coast4, .coast5 {
+.coast1,
+.coast2,
+.coast3,
+.coast4,
+.coast5 {
   display: flex;
   flex-direction: row;
   margin-left: 10px;
@@ -1119,7 +1122,6 @@ iframe {
   text-align: center;
   align-items: center;
   justify-content: center;
-
 }
 
 .coast-text {
@@ -1129,32 +1131,32 @@ iframe {
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .coast1 .seat {
-  background-color: #A7875C;
-  border: 1px solid #FFFFFF;
+  background-color: #a7875c;
+  border: 1px solid #ffffff;
 }
 
 .coast2 .seat {
-  background-color: #6F3B2F;
-  border: 1px solid #FFFFFF;
+  background-color: #6f3b2f;
+  border: 1px solid #ffffff;
 }
 
 .coast3 .seat {
   background-color: #536651;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
 }
 
 .coast4 .seat {
-  background-color: #4F4E59;
-  border: 1px solid #FFFFFF;
+  background-color: #4f4e59;
+  border: 1px solid #ffffff;
 }
 
 .coast5 .seat {
-  background-color: #0E0D0B;
-  border: 1px solid #FFFFFF;
+  background-color: #0e0d0b;
+  border: 1px solid #ffffff;
 }
 
 .cinema-row {
@@ -1168,7 +1170,7 @@ iframe {
 }
 
 .seat {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 24px;
   width: 24px;
   margin: 3px;
@@ -1179,30 +1181,37 @@ iframe {
   transition: background-color 0.3s;
 }
 
-.cinema-row.row-1 .seat:hover, .cinema-row.row-2 .seat:hover {
-  background-color: #4F4E59; 
+.cinema-row.row-1 .seat:hover,
+.cinema-row.row-2 .seat:hover {
+  background-color: #4f4e59;
 }
 
-.cinema-row.row-3 .seat:hover, .cinema-row.row-4 .seat:hover {
-  background-color: #536651; 
+.cinema-row.row-3 .seat:hover,
+.cinema-row.row-4 .seat:hover {
+  background-color: #536651;
 }
 
-.cinema-row.row-5 .seat:hover, .cinema-row.row-6 .seat:hover,
-.cinema-row.row-7 .seat:hover, .cinema-row.row-8 .seat:hover,
+.cinema-row.row-5 .seat:hover,
+.cinema-row.row-6 .seat:hover,
+.cinema-row.row-7 .seat:hover,
+.cinema-row.row-8 .seat:hover,
 .cinema-row.row-9 .seat:hover {
-  background-color: #6F3B2F; 
+  background-color: #6f3b2f;
 }
 
-.cinema-row.row-10 .seat:hover, .cinema-row.row-11 .seat:hover,
-.cinema-row.row-12 .seat:hover, .cinema-row.row-13 .seat:hover {
-  background-color: #A7875C; 
+.cinema-row.row-10 .seat:hover,
+.cinema-row.row-11 .seat:hover,
+.cinema-row.row-12 .seat:hover,
+.cinema-row.row-13 .seat:hover {
+  background-color: #a7875c;
 }
 
 .seat:active {
   transform: scale(0.9);
 }
 
-.seat-number-right, .seat-number-left{
+.seat-number-right,
+.seat-number-left {
   width: 9px;
   height: 14px;
   font-family: Alethia Next;
@@ -1210,7 +1219,7 @@ iframe {
   font-weight: 350;
   line-height: 29px;
   letter-spacing: 0em;
-  color: #B5A48D;
+  color: #b5a48d;
   margin: 10px;
 }
 
@@ -1231,7 +1240,7 @@ iframe {
   margin-right: auto;
   margin-top: 50px;
   border-radius: 4px;
-  border: 1px solid #B5A48D;
+  border: 1px solid #b5a48d;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -1241,7 +1250,7 @@ iframe {
   line-height: 58px;
   letter-spacing: 0em;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .frame-120 {
@@ -1266,7 +1275,7 @@ iframe {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
-  color: #B5A48D;
+  color: #b5a48d;
   background-color: rgba(255, 127, 80, 0);
 }
 
@@ -1302,9 +1311,9 @@ iframe {
 .line-10 {
   display: flex;
   width: 100%;
-  height: 2px; 
+  height: 2px;
   margin-top: 20px;
-  background-color: #B5A48D; 
+  background-color: #b5a48d;
 }
 
 .frame-119 {
@@ -1316,7 +1325,8 @@ iframe {
   background-color: rgba(231, 30, 191, 0);
 }
 
-.frame-115, .frame-116 {
+.frame-115,
+.frame-116 {
   display: flex;
   flex-direction: row;
   width: 289px;
@@ -1324,21 +1334,23 @@ iframe {
   background-color: #6f3b2f00;
 }
 
-.frame-116{ 
+.frame-116 {
   margin-top: 10px;
 }
 
-.frame-115 .text1, .frame-116 .text1{
+.frame-115 .text1,
+.frame-116 .text1 {
   font-family: Alethia Next;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
-  color: #FFFFFF; 
+  color: #ffffff;
 }
 
-.frame-115 .text2, .frame-116 .text2{
+.frame-115 .text2,
+.frame-116 .text2 {
   font-family: Alethia Next;
   font-size: 16px;
   font-weight: 400;
@@ -1346,10 +1358,10 @@ iframe {
   letter-spacing: 0em;
   text-align: right;
   margin-left: auto;
-  color: #FFFFFF; 
+  color: #ffffff;
 }
 
-.frame-119 .text1{
+.frame-119 .text1 {
   width: 68px;
   height: 11px;
   font-family: Alethia Next;
@@ -1359,10 +1371,10 @@ iframe {
   letter-spacing: 0em;
   white-space: nowrap;
   text-align: left;
-  color: #B5A48D; 
+  color: #b5a48d;
 }
 
-.frame-119 .text2{
+.frame-119 .text2 {
   width: 45px;
   height: 11px;
   font-family: Alethia Next;
@@ -1373,7 +1385,7 @@ iframe {
   text-align: right;
   margin-left: auto;
   margin-top: 0px;
-  color: #B5A48D; 
+  color: #b5a48d;
 }
 
 .text-28 {
@@ -1388,29 +1400,29 @@ iframe {
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .line-10-2 {
   width: 235px;
   height: 1px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-left: auto;
   margin-right: auto;
   transform: translateY(-50%);
 }
 
-.frame-119 .text1{
+.frame-119 .text1 {
   font-family: Alethia Next;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
-  color: #FFFFFF; 
+  color: #ffffff;
 }
 
-.frame-119 .text2{
+.frame-119 .text2 {
   font-family: Alethia Next;
   font-size: 16px;
   font-weight: 400;
@@ -1419,16 +1431,108 @@ iframe {
   text-align: right;
   margin-left: auto;
   margin-bottom: auto;
-  color: #B5A48D; 
+  color: #b5a48d;
 }
 
 .component-28 .text-28:hover {
-  color: #B5A48D; 
+  color: #b5a48d;
 }
 
 .component-28 .line-10-2:hover {
   background-color: #B5A48D; 
 }
+
+/* Афіша */
+
+.main-afisha {
+  margin: 10px 80px;
+}
+
+.row1-afisha {
+  display: flex;
+  justify-content: space-between;
+  font-family: Alethia Next;
+  color: #b5a48d;
+}
+
+.card-section-afisha {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card-afisha {
+  font-family: Alethia Next;
+  color: #b5a48d;
+  border: #eeeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  outline: #b5a48d solid 1px;
+  margin: 20px 30px;
+  width: 20rem;
+}
+
+.card-image-afisha img {
+  width: 100%;
+  height: auto;
+}
+
+.details-card-afisha {
+  margin: 5px 20px;
+  display: block;
+}
+
+.date-afisha,
+.genres-afisha,
+.title-afisha {
+  color: white;
+  margin: 0px 0px 10px 0px;
+  font-size: 12px;
+}
+
+.date-afisha {
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.genre-afisha {
+  font-size: 10px;
+}
+
+.title-afisha {
+  margin-top: 20px;
+  font-weight: 350;
+  line-height: 1.2rem;
+  font-size: 1rem;
+}
+
+.card-afisha a {
+  text-decoration: none;
+  color: white;
+  margin-top: auto;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  outline: #b5a48d solid 1px;
+}
+
+.row-afisha {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-afisha form {
+  display: flex;
+  justify-content: space-between;
+}
+/* SELECT CSS */
+
+/* End of select */
+
+/* Date input */
 
 /*--------------------------placing_order-------------------------------*/
 
@@ -1653,4 +1757,5 @@ input:focus ~ .highlight {
 .component-28-2 .text-28-2:hover {
   color: #B5A48D; 
 }
+
 

@@ -1,0 +1,56 @@
+{% extends "base.html" %}{% load static %}{% block main %}
+<div class="main-afisha">
+  <div class="row1-afisha">
+    <h1 class="header-afisha">Афіша</h1>
+    <h2 class="season-afisha">106 сезон</h2>
+  </div>
+  <div class="line-container-afisha"><div class="line"></div></div>
+
+  <div class="row-afisha">
+    <h2 style="color: #b5a48d">Жовтень</h2>
+
+    <form action="." method="get" id="filter-form">
+      <div class="custom-select">
+        <select name="input-select" id="input-select">
+          <option value="">Оберіть сцени</option>
+          <option value="allscenes">Всі сцени</option>
+          <option value="mainscene">Основна сцена</option>
+          <option value="camscene">Камерна сцена</option>
+        </select>
+      </div>
+      <input type="date" name="input-date" class="fa" id="input-date" />
+    </form>
+  </div>
+  <section class="card-section-afisha">
+    {% for show in theatre %}
+    <div class="card-afisha">
+      <div class="card-image-afisha">
+        <img src="/{{ show.image }}" alt="" />
+      </div>
+      <div class="details-card-afisha">
+        <p class="date-afisha">
+          {{ show.formatted_date }} | {{ show.formatted_time }}
+        </p>
+        <p class="genres-afisha">
+          {{ show.genre}} | {{ show.typescene }} | {{ show.num_scene }} дія
+        </p>
+        <p class="author-afisha">{{ show.author }}</p>
+        <p class="title-afisha">{{ show.title }}</p>
+      </div>
+      <a href="{% url 'selectTickets' show_id=show.id %}">КУПИТИ КВИТОК</a>
+    </div>
+    {% endfor %}
+  </section>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+  $(function () {
+    // Detect changes in the select dropdown or datepicker
+    $("#input-select, #input-date").on("change", function () {
+      $("#filter-form").submit(); // Automatically submit the form
+    });
+  });
+</script>
+{% endblock %}

@@ -14,30 +14,29 @@
           <div id="mySidenav" class="sidenav">
             <div class="frame-21">
               <div class="button">
-                <a href="#" class="close" onclick="closeNav()"></a>
+                <a
+                  class="close"
+                  style="cursor: pointer"
+                  onclick="closeNav()"
+                ></a>
               </div>
               <div class="text5">Меню</div>
             </div>
             <div class="frame-21-2">
               <div class="frame-19">
-                <a href="#" class="component-14">
-                  <div class="text6">01/</div>
+                <a href="{% url 'index' %}" class="component-14">
                   <div class="text7">Головна</div>
                 </a>
-                <a href="#" class="component-15">
-                  <div class="text6">02/</div>
+                <a href="{% url 'afisha' %}" class="component-15">
                   <div class="text7">Афіша</div>
                 </a>
-                <a href="#" class="component-16">
-                  <div class="text6">03/</div>
+                <a href="{% url 'abouttheatre' %}" class="component-16">
                   <div class="text7">Про театр</div>
                 </a>
                 <a href="#" class="component-17">
-                  <div class="text6">04/</div>
                   <div class="text7">Новини</div>
                 </a>
-                <a href="#" class="component-18">
-                  <div class="text6">05/</div>
+                <a href="{% url 'contact' %}" class="component-18">
                   <div class="text7">Контакти</div>
                 </a>
               </div>
@@ -77,9 +76,9 @@
             integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
             crossorigin="anonymous"
           />
-          <form action="">
+          <form action="{% url 'afisha' %}" method="post">
             <input type="search" required />
-            <i class="fa fa-search"></i>
+            <button class="fa fa-search"></button>
           </form>
         </div>
       </div>
@@ -93,11 +92,11 @@
         <div class="footer">
           <div class="component-9">
             <div class="frame-66">
-              <a href="#">Головна</a>
-              <a href="#">Афіша</a>
-              <a href="#">Про Театр</a>
+              <a href="{% url 'index' %}">Головна</a>
+              <a href="{% url 'afisha' %}">Афіша</a>
+              <a href="{% url 'abouttheatre' %}">Про Театр</a>
               <a href="#">Новини</a>
-              <a href="#">Контакти</a>
+              <a href="{% url 'contact' %}">Контакти</a>
             </div>
             <div class="frame-67">
               <div class="text3">Театр Титанів</div>
