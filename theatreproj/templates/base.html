@@ -77,8 +77,9 @@
             crossorigin="anonymous"
           />
           <form action="{% url 'afisha' %}" method="post">
-            <input type="search" required />
-            <button class="fa fa-search"></button>
+            {% csrf_token %}
+            <input type="search" required name="search" />
+            <button class="fa fa-search" type="submit"></button>
           </form>
         </div>
       </div>
