@@ -13,8 +13,8 @@ def contact(request):
 def abouttheatre(request):
     return render(request, "abouttheatre.html")
 
-def selectTickets(request, show_id):
-    theatshow = models.TheatreShow.objects.get(slug=show_id)
+def selectTickets(request, slug):
+    theatshow = models.TheatreShow.objects.get(slug=slug)
     
     return render(request, "selectTickets.html", {
         "theatre": theatshow

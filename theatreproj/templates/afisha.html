@@ -37,7 +37,7 @@
         <p class="author-afisha">{{ show.author }}</p>
         <p class="title-afisha">{{ show.title }}</p>
       </div>
-      <a href="{% url 'selectTickets' show_id=show.slug %}">КУПИТИ КВИТОК</a>
+      <a href="{% url 'selectTickets' slug=show.slug %}">КУПИТИ КВИТОК</a>
     </div>
     {% endfor %}
   </section>

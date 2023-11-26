@@ -26,6 +26,9 @@ class TheatreShow(models.Model):
     formatted_date = models.CharField(max_length=255, blank=True, null=True)
     formatted_time = models.CharField(max_length=255, blank=True, null=True)
 
+    def get_absolute_url(self):
+        return reverse('selectTickets', kwargs={"slug": self.slug})
+
 
     def save(self, *args, **kwargs):
         self.formatted_date = self.date.strftime("%a, %d / %m / %Y")
