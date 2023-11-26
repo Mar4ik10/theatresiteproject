@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+import datetime
 
 # Create your models here.
 
@@ -15,7 +16,8 @@ class TheatreShow(models.Model):
 
     typescene = models.CharField(max_length=150, choices=SCENES_CHOICES, default="Основна сцена")
     num_scene = models.IntegerField()
-    date = models.DateTimeField()
+    date = models.DateField()
+    time = models.TimeField(default=datetime.time(18, 00))
     author = models.CharField(max_length=255)
     created = models.DateTimeField(auto_now_add=True)
 
@@ -24,7 +26,7 @@ class TheatreShow(models.Model):
 
     def save(self, *args, **kwargs):
         self.formatted_date = self.date.strftime("%a, %d / %m / %Y")
-        self.formatted_time = self.date.strftime("%H:%M")
+        self.formatted_time = self.time.strftime("%H:%M")
 
         super().save(*args, **kwargs)
 

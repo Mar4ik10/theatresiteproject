@@ -22,6 +22,19 @@ def selectTickets(request, show_id):
 
 def afisha(request):
     theatshowall = models.TheatreShow.objects.all()
+    scenevalues = {'mainscene': "Основна сцена", 'camscene': "Камерна сцена"}
         
-    
+    if request.method =="GET":
+        date_filter = request.GET.get('input-date', None)
+        typeofscene = request.GET.get('input-select', None)
+        if date_filter:
+            theatreshows = theatshowall.filter(date=date_filter)
+            return render(request, "afisha.html", {"theatre": theatreshows})
+        
+        if typeofscene:
+            for i, j in scenevalues.items():
+                if typeofscene == i:
+                    theatreshows = theatshowall.filter(typescene=j)
+                    return render(request, "afisha.html", {"theatre": theatreshows})
+        
     return render(request, "afisha.html", {"theatre": theatshowall})

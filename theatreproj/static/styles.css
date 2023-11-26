@@ -78,7 +78,7 @@ body {
   line-height: normal;
 }
 
-form {
+.component-2 form {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -93,7 +93,7 @@ form {
   padding: 5px;
 }
 
-input {
+.component-2 input {
   position: absolute;
   top: 0;
   left: 0;
@@ -108,7 +108,7 @@ input {
   padding: 0 20px;
 }
 
-.fa {
+.component-2 .fa {
   box-sizing: border-box;
   padding: 10px;
   width: 42.5px;
@@ -124,19 +124,19 @@ input {
   transition: all 1s;
 }
 
-form:hover,
-form:valid {
+.component-2 form:hover,
+.component-2 form:valid {
   width: 200px;
   cursor: pointer;
 }
 
-form:hover input,
-form:valid input {
+.component-2 form:hover input,
+.component-2 form:valid input {
   display: block;
 }
 
-form:hover .fa,
-form:valid .fa {
+.component-2 form:hover .fa,
+.component-2 form:valid .fa {
   background: #b5a48d;
   color: white;
 }
@@ -1517,3 +1517,18 @@ iframe {
   width: 100%;
   outline: #b5a48d solid 1px;
 }
+
+.row-afisha {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-afisha form {
+  display: flex;
+  justify-content: space-between;
+}
+/* SELECT CSS */
+
+/* End of select */
+
+/* Date input */
