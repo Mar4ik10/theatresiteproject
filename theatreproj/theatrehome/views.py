@@ -13,3 +13,6 @@ def abouttheatre(request):
 
 def selectTickets(request):
     return render(request, "selectTickets.html")
+
+def placingOrder(request):
+    return render(request, "placingOrder.html")
