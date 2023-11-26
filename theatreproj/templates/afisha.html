@@ -22,7 +22,7 @@
     </form>
   </div>
   <section class="card-section-afisha">
-    {% for show in theatre %}
+    {% if searched %} {% for show in theatre %}
     <div class="card-afisha">
       <div class="card-image-afisha">
         <img src="/{{ show.image }}" alt="" />
@@ -39,7 +39,7 @@
       </div>
       <a href="{% url 'selectTickets' show_id=show.id %}">КУПИТИ КВИТОК</a>
     </div>
-    {% endfor %}
+    {% endfor %} {% endif %}
   </section>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

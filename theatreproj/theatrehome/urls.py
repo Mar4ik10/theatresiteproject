@@ -7,6 +7,6 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("contact/", views.contact, name="contact"),
     path("abouttheatre/", views.abouttheatre, name="abouttheatre"),
-    path("selectTickets/<int:show_id>/", views.selectTickets, name="selectTickets"),
+    path("selectTickets/<slug:show_id>/", views.selectTickets, name="selectTickets"),
     path("afisha/", views.afisha, name='afisha'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

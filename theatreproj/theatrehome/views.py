@@ -39,6 +39,6 @@ def afisha(request):
     
     if request.method == "POST":
         searched = request.POST['search']
-        theatreshowsbysearch = theatshowall.filter(title__contains=searched)
-        return render(request, "afisha.html", {"theatre": theatreshowsbysearch})
+        theatreshowsbysearch = theatshowall.filter(title__icontains=searched.lower())
+        return render(request, "afisha.html", {"theatre": theatreshowsbysearch, "searched": searched})
     return render(request, "afisha.html", {"theatre": theatshowall})

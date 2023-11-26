@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils import timezone
+from django.template.defaultfilters import slugify
 import datetime
 
 # Create your models here.
@@ -20,6 +20,7 @@ class TheatreShow(models.Model):
     time = models.TimeField(default=datetime.time(18, 00))
     author = models.CharField(max_length=255)
     created = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(max_length=255, unique=True, db_index=True)
 
     formatted_date = models.CharField(max_length=255, blank=True, null=True)
     formatted_time = models.CharField(max_length=255, blank=True, null=True)
@@ -27,6 +28,9 @@ class TheatreShow(models.Model):
     def save(self, *args, **kwargs):
         self.formatted_date = self.date.strftime("%a, %d / %m / %Y")
         self.formatted_time = self.time.strftime("%H:%M")
+
+        if not self.slug:
+            self.slug = slugify(self.title)
 
         super().save(*args, **kwargs)
 
