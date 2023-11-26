@@ -14,7 +14,7 @@ def abouttheatre(request):
     return render(request, "abouttheatre.html")
 
 def selectTickets(request, show_id):
-    theatshow = models.TheatreShow.objects.get(pk=show_id)
+    theatshow = models.TheatreShow.objects.get(slug=show_id)
     
     return render(request, "selectTickets.html", {
         "theatre": theatshow

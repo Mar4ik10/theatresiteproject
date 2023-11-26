@@ -1,6 +1,7 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 import datetime
+from django.urls import reverse
 
 # Create your models here.
 
@@ -24,6 +25,7 @@ class TheatreShow(models.Model):
 
     formatted_date = models.CharField(max_length=255, blank=True, null=True)
     formatted_time = models.CharField(max_length=255, blank=True, null=True)
+
 
     def save(self, *args, **kwargs):
         self.formatted_date = self.date.strftime("%a, %d / %m / %Y")
