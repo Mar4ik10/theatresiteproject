@@ -13,6 +13,9 @@ def contact(request):
 def abouttheatre(request):
     return render(request, "abouttheatre.html")
 
+def placingOrder(request):
+    return render(request, "placingOrder.html")
+
 def selectTickets(request, show_id):
     theatshow = models.TheatreShow.objects.get(pk=show_id)
     
