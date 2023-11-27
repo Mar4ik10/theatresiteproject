@@ -15,10 +15,11 @@ def abouttheatre(request):
 
 def selectTickets(request, slug):
     theatshow = models.TheatreShow.objects.get(slug=slug)
-    
     return render(request, "selectTickets.html", {
         "theatre": theatshow
     })
+def placingOrder(request):
+    return render(request, "placingOrder.html")
 
 def afisha(request):
     theatshowall = models.TheatreShow.objects.all()
