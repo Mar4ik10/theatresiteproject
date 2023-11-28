@@ -19,7 +19,119 @@ body {
   font-weight: 400;
 }
 
-.component-8 {
+header {
+  padding: 3rem;
+}
+
+.nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  position: relative;
+}
+
+.nav .navOpenBtn {
+  cursor: pointer;
+  height: 80%;
+}
+
+.nav .navCloseBtn {
+  cursor: pointer;
+}
+
+.nav .nav-links {
+  background-color: #0e0d0b;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: -200%;
+  list-style: none;
+  padding: 40px;
+  z-index: 100;
+  font-family: "Alethia Next";
+  flex-direction: column;
+  transition: all 0.4s ease;
+}
+
+.nav.openNav .nav-links {
+  left: 0;
+}
+
+.nav-links p {
+  font-size: 1.5rem;
+  color: #b5a48d;
+  margin: 20px 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 5rem;
+}
+
+.nav-links a:hover {
+  color: #b7ac9d;
+}
+
+.nav .title-nav {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  text-align: center;
+}
+
+.nav i.search-icon {
+  color: white;
+  cursor: pointer;
+  height: 80%;
+}
+
+.nav .search-box {
+  position: absolute;
+  top: calc(100%);
+  max-width: calc(100% - 20px);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.nav.openSearch .search-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-box form {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding-top: 10px;
+  justify-content: cener;
+  display: flex;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  left: 0px;
+  top: 30%;
+  font-size: 80%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.search-box input {
+  position: absolute;
+  left: 30px;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background-color: white;
+  padding: 5px 15px 5px 15px;
+  font-size: 0.7em;
+}
+
+/* .component-8 {
   display: flex;
   margin-top: 40px;
   margin-left: 80px;
@@ -141,7 +253,6 @@ body {
   color: white;
 }
 
-
 .nav-icon {
   position: absolute;
   cursor: pointer;
@@ -216,7 +327,7 @@ body {
 .close:hover:before,
 .close:hover:after {
   background-color: #b5a48d;
-}
+} */
 
 /*.sidenav .closebtn {
     position: absolute;
@@ -1439,7 +1550,7 @@ iframe {
 }
 
 .component-28 .line-10-2:hover {
-  background-color: #B5A48D; 
+  background-color: #b5a48d;
 }
 
 /* Афіша */
@@ -1542,10 +1653,10 @@ iframe {
   height: 12px;
   border-radius: 50%;
   background-color: #000;
-  top: 50%; 
+  top: 50%;
   transform: translateY(-50%);
   left: calc(50% - 100px);
-  background-color: #B5A48D;
+  background-color: #b5a48d;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1602,7 +1713,7 @@ iframe {
   background-color: rgba(139, 69, 113, 0);
 }
 
-.frame-143 .text{
+.frame-143 .text {
   width: 306px;
   height: 17px;
   font-family: Alethia Next;
@@ -1612,107 +1723,133 @@ iframe {
   letter-spacing: 0em;
   text-align: left;
   margin-top: 0px;
-  color: #B5A48D; 
+  color: #b5a48d;
 }
 
 .frame-141 {
   display: flex;
   flex-direction: column;
-  width: auto; 
+  width: auto;
   height: auto;
   margin-top: 50px;
 }
 
-* { box-sizing:border-box; }
-
-.frame-141 .group 			  { 
-  position:relative; 
-  margin-bottom:28px; 
+* {
+  box-sizing: border-box;
 }
 
-.frame-141 input 				{
-  font-size:18px;
-  padding:10px 10px 10px 5px;
-  display:block;
-  width:300px;
-  border:none;
-  border-bottom:1px solid #ffffff;
+.frame-141 .group {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.frame-141 input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
   background-color: #0e0d0b;
   color: #ffffff;
-  font-size:15px;
+  font-size: 15px;
   font-family: Alethia Next;
 }
 
-.frame-141 input:focus 		{ outline:none; }
+.frame-141 input:focus {
+  outline: none;
+}
 
-label 				 {
-  color:#ffffff; 
-  font-size:15px;
+label {
+  color: #ffffff;
+  font-size: 15px;
   font-family: Alethia Next;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
   transition: 0.2s ease all;
 }
 
-input:focus ~ label, input:valid ~ label 		{
-  top:-20px;
-  font-size:14px;
-  color:#B5A48D;
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #b5a48d;
 }
 
-.bar 	{ position:relative; display:block; width:300px; }
-.bar:before, .bar:after 	{
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:1px; 
-  position:absolute;
-  background:#B5A48D; 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #b5a48d;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 .bar:before {
-  left:50%;
+  left: 50%;
 }
 .bar:after {
-  right:50%; 
+  right: 50%;
 }
 
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
 }
 
 .highlight {
-  position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
 }
 
 @-webkit-keyframes inputHighlighter {
-	from { background:#B5A48D; }
-  to 	{ width:0; background:transparent; }
+  from {
+    background: #b5a48d;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 @-moz-keyframes inputHighlighter {
-	from { background:#B5A48D; }
-  to 	{ width:0; background:transparent; }
+  from {
+    background: #b5a48d;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 @keyframes inputHighlighter {
-	from { background:#B5A48D; }
-  to 	{ width:0; background:transparent; }
+  from {
+    background: #b5a48d;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 
 .frame-120-2 .text {
@@ -1726,7 +1863,7 @@ input:focus ~ .highlight {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
-  color: #B5A48D;
+  color: #b5a48d;
   background-color: rgba(255, 127, 80, 0);
 }
 
@@ -1742,20 +1879,31 @@ input:focus ~ .highlight {
   margin-top: 25px;
   margin-left: auto;
   margin-right: auto;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .line-10-3 {
   width: 196px;
   height: 1px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-left: auto;
   margin-right: auto;
   transform: translateY(-50%);
 }
 
 .component-28-2 .text-28-2:hover {
-  color: #B5A48D; 
+  color: #b5a48d;
 }
 
+/* MEDIA QUERY START */
 
+@media screen and (max-width: 500) {
+  .text7 {
+    font-size: 5px;
+    letter-spacing: normal;
+  }
+
+  .frame-2 {
+    display: none !important;
+  }
+}
