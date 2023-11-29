@@ -63,40 +63,39 @@
     <main>{% block main %}{% endblock %}</main>
 
     <footer>
-      <div class="footerLines">
-        <div class="line"></div>
-        <div class="footer">
-          <div class="component-9">
-            <div class="frame-66">
-              <a href="{% url 'index' %}">Головна</a>
-              <a href="{% url 'afisha' %}">Афіша</a>
-              <a href="{% url 'abouttheatre' %}">Про Театр</a>
-              <a href="#">Новини</a>
-              <a href="{% url 'contact' %}">Контакти</a>
-            </div>
-            <div class="frame-67">
-              <div class="text3">Театр Титанів</div>
-              <div class="text3">Київ | 1918</div>
-            </div>
-            <div class="frame-68">
-              <a href="#">Instagram</a>
-              <a href="#">Facebook</a>
-              <a href="#">WhatsApp</a>
-              <a href="#">YouTube</a>
-              <a href="#">X</a>
-            </div>
+      <hr style="border-color: #b5a48d" />
+      <div class="footer-container">
+        <div class="footer-above">
+          <ul class="footer-left">
+            <li><a href="{% url 'index' %}">Головна</a></li>
+            <li><a href="{% url 'afisha' %}">Афіша</a></li>
+            <li><a href="{% url 'abouttheatre' %}">Про Театр</a></li>
+            <li><a href="#">Новини</a></li>
+            <li><a href="{% url 'contact' %}">Контакти</a></li>
+          </ul>
+          <div class="footer-center">
+            <div>Театр Титанів</div>
+            <div>Київ | 1918</div>
           </div>
+          <ul class="footer-right">
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">WhatsApp</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">X</a></li>
+          </ul>
+        </div>
 
-          <div class="frame-35">
-            <p class="left">©2023 Театр Титанів. Всі права захищені.</p>
-            <div class="right-container">
-              <p>Privacy</p>
-              <p class="right">Cookies</p>
-            </div>
+        <div class="footer-prescriptions">
+          <p class="left">©2023 Театр Титанів. Всі права захищені.</p>
+          <div class="right-container">
+            <p>Privacy</p>
+            <p class="right">Cookies</p>
           </div>
         </div>
       </div>
     </footer>
+
     <script>
       const nav = document.querySelector(".nav"),
         navOpenBtn = document.querySelector(".navOpenBtn"),

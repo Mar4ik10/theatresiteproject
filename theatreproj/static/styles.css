@@ -31,13 +31,21 @@ body {
   margin: 3rem;
 }
 
-.nav .navOpenBtn {
+.nav .navOpenBtn,
+.nav .navCloseBtn {
   cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.nav .navOpenBtn {
   height: 45%;
 }
 
-.nav .navCloseBtn {
-  cursor: pointer;
+.nav .navOpenBtn:hover {
+  color: #b5a48d;
+}
+.nav .navCloseBtn:hover {
+  color: #b5a48d;
 }
 
 .nav .nav-links {
@@ -86,6 +94,11 @@ body {
   color: white;
   cursor: pointer;
   height: 45%;
+  transition: 0.5s ease;
+}
+
+.nav i.search-icon:hover {
+  color: #b5a48d;
 }
 
 .nav .search-box {
@@ -134,12 +147,7 @@ body {
   font-family: "Alethia Next";
 }
 
-#main {
-  transition: margin-left 0.5s;
-  padding: 16px;
-}
-
-.frame-21 {
+/* .frame-21 {
   display: flex;
   flex-direction: column;
   height: auto;
@@ -148,9 +156,9 @@ body {
   margin-left: 80px;
   background-color: rgba(0, 0, 0, 0);
   position: relative;
-}
+} */
 
-.text5 {
+/* .text5 {
   margin-top: 50px;
   font-family: Century Gothic;
   font-size: 24px;
@@ -239,11 +247,76 @@ body {
   text-align: left;
   margin-left: 80px;
   color: #ffffff;
-}
+} */
 
 /*--------------------------footer-------------------------------*/
 
-.footerLines {
+.footer-container {
+  padding: 3rem;
+  color: white;
+}
+
+.footer-above {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-above .footer-left,
+.footer-above .footer-right {
+  list-style: none;
+  font-family: Satoshi;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.footer-above .footer-left li a,
+.footer-above .footer-right li a {
+  margin: 2px 0;
+}
+
+.footer-above .footer-center {
+  font-family: Century Gothic;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.footer-left {
+  align-items: flex-start;
+}
+
+.footer-right {
+  align-items: flex-end;
+}
+
+.footer-above a {
+  color: #b5a48d;
+  text-decoration: none;
+}
+
+.footer-left a {
+  float: left;
+}
+.footer-right a {
+  float: right;
+}
+
+.footer-prescriptions {
+  font-size: 0.7em;
+  font-family: Satoshi;
+  margin: 10px 0 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-prescriptions .right-container {
+  display: flex;
+}
+
+.footer-prescriptions .right-container p:nth-child(2) {
+  margin-left: 10px;
+}
+
+/* .footerLines {
   bottom: 0;
   right: 0;
   margin-left: 0px;
@@ -415,7 +488,7 @@ body {
 .frame-35 .right {
   margin-left: 10px;
   margin-right: auto;
-}
+} */
 
 /*--------------------------contacts-------------------------------*/
 
