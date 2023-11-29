@@ -1,0 +1,23 @@
+@media only screen and (max-width: 500px) {
+  .nav {
+    height: 20px;
+  }
+
+  .title-nav-row2 {
+    display: none !important;
+  }
+
+  .nav .nav-links a {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .title-nav {
+    font-size: 0.9em;
+  }
+
+  .nav .nav-links a {
+    font-size: 1.3em;
+  }
+}

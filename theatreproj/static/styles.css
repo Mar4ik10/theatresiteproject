@@ -1,3 +1,5 @@
+@import "responsive.css";
+
 * {
   margin: 0px;
   padding: 0px;
@@ -19,21 +21,19 @@ body {
   font-weight: 400;
 }
 
-header {
-  padding: 3rem;
-}
-
 .nav {
   color: white;
   display: flex;
   justify-content: space-between;
   font-size: 2rem;
   position: relative;
+  height: 78px;
+  margin: 3rem;
 }
 
 .nav .navOpenBtn {
   cursor: pointer;
-  height: 80%;
+  height: 45%;
 }
 
 .nav .navCloseBtn {
@@ -68,6 +68,7 @@ header {
   text-decoration: none;
   color: white;
   font-size: 5rem;
+  transition: all 0.2s linear;
 }
 
 .nav-links a:hover {
@@ -78,12 +79,13 @@ header {
   font-family: "Century Gothic";
   font-weight: 400;
   text-align: center;
+  transition: all 0.2s linear;
 }
 
 .nav i.search-icon {
   color: white;
   cursor: pointer;
-  height: 80%;
+  height: 45%;
 }
 
 .nav .search-box {
@@ -129,226 +131,12 @@ header {
   background-color: white;
   padding: 5px 15px 5px 15px;
   font-size: 0.7em;
+  font-family: "Alethia Next";
 }
-
-/* .component-8 {
-  display: flex;
-  margin-top: 40px;
-  margin-left: 80px;
-  margin-right: 80px;
-  width: auto;
-  height: 76px;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.component-1 {
-  display: flex;
-  width: 40px;
-  height: 23px;
-  margin-top: auto;
-  margin-bottom: auto;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.component-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 76px;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.frame-2 {
-  width: 1220px;
-  height: 60px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.text1 {
-  color: var(--white, #fff);
-  font-family: Century Gothic;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.text2 {
-  color: var(--white, #fff);
-  font-family: Century Gothic;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.component-2 form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 1s;
-  width: 50px;
-  height: 50px;
-  background: white;
-  box-sizing: border-box;
-  border-radius: 25px;
-  border: 4px solid white;
-  padding: 5px;
-}
-
-.component-2 input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 42.5px;
-  line-height: 30px;
-  outline: 0;
-  border: 0;
-  display: none;
-  font-size: 1em;
-  border-radius: 20px;
-  padding: 0 20px;
-}
-
-.component-2 .fa {
-  box-sizing: border-box;
-  padding: 10px;
-  width: 42.5px;
-  height: 42.5px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-radius: 50%;
-  color: #ffffff;
-  background: #000000;
-  text-align: center;
-  font-size: 1.2em;
-  transition: all 1s;
-}
-
-.component-2 form:hover,
-.component-2 form:valid {
-  width: 200px;
-  cursor: pointer;
-}
-
-.component-2 form:hover input,
-.component-2 form:valid input {
-  display: block;
-}
-
-.component-2 form:hover .fa,
-.component-2 form:valid .fa {
-  background: #b5a48d;
-  color: white;
-}
-
-.nav-icon {
-  position: absolute;
-  cursor: pointer;
-}
-
-.nav-icon:before,
-.nav-icon:after {
-  position: absolute;
-  left: 17px;
-  top: 0px;
-  content: " ";
-  height: 38px;
-  width: 2px;
-
-  background-color: #ffffff;
-}
-.nav-icon:before {
-  transform: rotate(90deg);
-}
-.nav-icon:after {
-  transform: rotate(-90deg);
-  margin-top: 10px;
-}
-
-.nav-icon:hover:before,
-.nav-icon:hover:after {
-  background-color: #b5a48d;
-}
-
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  background-color: #111;
-  overflow-x: hidden;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #eeeaea;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.close:before,
-.close:after {
-  position: absolute;
-  left: 15px;
-  content: " ";
-  height: 33px;
-  width: 2px;
-  background-color: #ffffff;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
-}
-
-.close:hover:before,
-.close:hover:after {
-  background-color: #b5a48d;
-} */
-
-/*.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}*/
 
 #main {
   transition: margin-left 0.5s;
   padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
 }
 
 .frame-21 {
