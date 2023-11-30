@@ -15,6 +15,8 @@
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'responsive.css' %}" />
+
   </head>
   <body>
     <header>
@@ -65,8 +67,14 @@
     <footer>
       <hr style="border-color: #b5a48d" />
       <div class="footer-container">
+        <div class="hidden-footer-center">
+          <div>Театр Титанів</div>
+          <div>Київ | 1918</div>
+        </div>
         <div class="footer-above">
+          
           <ul class="footer-left">
+            <li><h4>Сторінки</h4></li>
             <li><a href="{% url 'index' %}">Головна</a></li>
             <li><a href="{% url 'afisha' %}">Афіша</a></li>
             <li><a href="{% url 'abouttheatre' %}">Про Театр</a></li>
@@ -78,6 +86,7 @@
             <div>Київ | 1918</div>
           </div>
           <ul class="footer-right">
+            <li><h4>Мережі</h4></li>
             <li><a href="https://www.instagram.com/">Instagram</a></li>
             <li><a href="#">Facebook</a></li>
             <li><a href="#">WhatsApp</a></li>
@@ -87,10 +96,10 @@
         </div>
 
         <div class="footer-prescriptions">
-          <p class="left">©2023 Театр Титанів. Всі права захищені.</p>
+          <p class=>©2023 Театр Титанів. Всі права захищені.</p>
           <div class="right-container">
             <p>Privacy</p>
-            <p class="right">Cookies</p>
+            <p class=>Cookies</p>
           </div>
         </div>
       </div>
