@@ -15,9 +15,7 @@ def abouttheatre(request):
 
 def selectTickets(request, slug):
     theatshow = models.TheatreShow.objects.get(slug=slug)
-    return render(request, "selectTickets.html", {
-        "theatre": theatshow
-    })
+    return render(request, "selectTickets.html")
 def placingOrder(request):
     return render(request, "placingOrder.html")
 
@@ -40,6 +38,6 @@ def afisha(request):
     
     if request.method == "POST":
         searched = request.POST['search']
-        theatreshowsbysearch = theatshowall.filter(title__icontains=searched.lower())
+        theatreshowsbysearch = theatshowall.filter(title__icontains=searched)
         return render(request, "afisha.html", {"theatre": theatreshowsbysearch, "searched": searched})
     return render(request, "afisha.html", {"theatre": theatshowall})

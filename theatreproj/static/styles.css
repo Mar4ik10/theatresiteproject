@@ -1425,3 +1425,14 @@ input:focus ~ .highlight {
     display: none !important;
   }
 }
+
+/*  dsadadsd*/
+
+.title {
+  color: var(--beige, #b5a48d);
+  font-family: Alethia Next;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 350px;
+  line-height: normal;
+}
