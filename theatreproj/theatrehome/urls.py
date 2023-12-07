@@ -14,7 +14,7 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("contact/", views.contact, name="contact"),
     path("abouttheatre/", views.abouttheatre, name="abouttheatre"),
-    path("selectTickets/", views.selectTickets, name="selectTickets"),
+    path("selectTickets/<slug:slug>/", views.selectTickets, name="selectTickets"),
     path("afisha/", views.afisha, name='afisha'),
     re_path(r'^robots\.txt$', TemplateView.as_view(template_name="theatreproj/robots.txt", content_type="text/plain")),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
