@@ -135,6 +135,7 @@ body {
   cursor: pointer;
 }
 
+
 .search-box input {
   position: absolute;
   left: 30px;
@@ -146,6 +147,241 @@ body {
   font-size: 0.7em;
   font-family: "Alethia Next";
 }
+
+/* Releases*/
+.navMain {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  position: relative;
+  height: 78px;
+  margin-left: 3rem ;
+  margin-right: 3rem;
+  padding-top: 80px;
+  margin-bottom: 120px;
+}
+.navMain .navOpenBtn,
+.navMain .navCloseBtn {
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.navMain .navOpenBtn {
+  height: 45%;
+}
+
+.navMain .navOpenBtn:hover {
+  color: #b5a48d;
+}
+.navMain .navCloseBtn:hover {
+  color: #b5a48d;
+}
+
+.navMain .nav-links {
+  background-color: #0e0d0b;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: -200%;
+  list-style: none;
+  padding: 40px;
+  z-index: 100;
+  font-family: "Alethia Next";
+  flex-direction: column;
+  transition: all 0.4s ease;
+}
+
+.navMain.openNav .nav-links {
+  left: 0;
+}
+
+.navMain .title-nav {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+
+.navMain i.search-icon {
+  color: white;
+  cursor: pointer;
+  height: 45%;
+  transition: 0.5s ease;
+}
+
+.navMain i.search-icon:hover {
+  color: #b5a48d;
+}
+
+.navMain .search-box {
+  position: absolute;
+  top: calc(100%);
+  max-width: calc(100% - 20px);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.navMain.openSearch .search-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+.contentScreen { 
+  background-clip: padding-box;
+  background-image: url(image22.png);
+  background-size:cover;
+  padding-bottom: 0px;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-origin: border-box;
+} 
+.desc {
+  margin-bottom: 20px;
+}
+.contentDescData {
+  color: var(--white, #FFF);
+  font-family: Alethia Next;
+  font-size: 24px;
+  font-weight: 350;
+  margin-bottom: 20px;
+  min-height: auto;
+  padding-left: 80px;
+  margin-top: 532px;
+}
+.contentDesc {
+  color: var(--white, #FFF);
+  font-display: flex;
+  font-family: Alethia Next;
+  max-height: 945px;
+  padding-right:255px;
+  font-size: 32px;
+  font-weight: 350;
+  padding-left: 80px;
+}
+
+/* Coming soon */ 
+.comingSoon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  
+}
+
+.titlemc {
+  color: var(--beige, #B5A48D);
+  font-family: Alethia Next;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 350px;
+  line-height: normal;
+  padding-bottom: 60px;
+}
+.cardsContainer {
+  display: border-box;
+  font-family: Alethia Next;
+  font-size: 20px;
+  font-weight: 350;
+  margin-top: 60px;
+  margin-left: 20px;
+}
+
+.card1{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background-image: url(image23.png);
+  padding-bottom: 50px;
+  width: 265px;
+  height: 380px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  
+}
+.card2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background-image: url(image24.png);
+  padding-bottom: 60px;
+  width: 265px;
+  height: 380px;
+  float: left;
+  margin-right: 30px;
+}
+.card3{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background-image: url(image25.png);
+  padding-bottom: 50px;
+  width: 265px;
+  height: 380px;
+  float: left;
+  margin-right: 30px;
+  
+}
+.card4{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background-image: url(image26.png);
+  padding-bottom: 50px;
+  width: 265px;
+  height: 380px;
+  float: left;
+  margin-right: 30px;
+  
+}
+.cardPrem {
+  color: var(--beige, #B5A48D);
+  font-family: Alethia Next;
+  font-size: 20px;
+  font-weight: 350;
+  margin-top: 280px;
+  
+  margin-left: 20px;
+}
+.cardData {
+  color: var(--white, #FFF);
+  font-size: 16px;
+  font-family: Alethia Next;
+  font-weight: 350;
+  
+  margin-left: 20px;
+}
+.cardDesc {
+  color: var(--white, #FFF);
+  font-size: 16px;
+  font-family: Alethia Next;
+  font-weight: 350;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+
+/* About Theatre main block */
+.abouttheatre{
+  margin-left: 80px;
+}
+.descAbThe {
+  width: 740px;
+  height: 500px;
+}
+
+/*  */
 
 /*--------------------------footer-------------------------------*/
 
