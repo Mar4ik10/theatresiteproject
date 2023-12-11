@@ -1,6 +1,36 @@
 @import "styles.css";
 
+@media screen and (max-width: 977px) {
+  /* _________SELECT TICKETS________*/
+  .mainTickets {
+    justify-content: center;
+  }
+
+  .tickets-header {
+    flex-direction: column;
+  }
+
+  .tickets-info {
+    align-items: center;
+  }
+
+  .tickets-steps {
+    order: -1;
+    margin-top: 0;
+    width: 90%;
+  }
+
+  .progress-text::before {
+    top: calc(50% - 2rem);
+  }
+
+  .tickets-info {
+    margin-top: 20px;
+  }
+}
+
 @media screen and (max-width: 900px) {
+  /* _________CONTACTS_______ */
   .contact-container {
     flex-direction: column;
   }
@@ -21,6 +51,15 @@
 }
 
 @media screen and (max-width: 750px) {
+  /* ____________SELECT TICKETS_______ */
+
+  .tickets-title {
+    width: 230px;
+  }
+
+  .tickets-seats {
+    margin: 0;
+  }
   .timeline-items::before {
     left: 11px;
   }
@@ -42,9 +81,15 @@
   .timeline-date {
     font-size: 2rem;
   }
+
+  .seat {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
+  /* ____HEADER___ */
   .title-nav-row2 {
     display: none !important;
   }
@@ -53,6 +98,7 @@
     font-size: 1.3em;
   }
 
+  /* ____AFISHA____ */
   .row1-afisha {
     flex-direction: column;
     align-items: center;
@@ -63,9 +109,38 @@
   .main-afisha {
     margin: 0;
   }
-}
 
+  /* ______SELECT TICKETS ______ */
+
+  .cinema-row .seat {
+    margin: 1px;
+  }
+
+  .mainTickets {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .tickets-header {
+    margin-left: 10px;
+  }
+
+  .tickets-steps {
+    width: 100%;
+  }
+
+  .cost1,
+  .cost2,
+  .cost3,
+  .cost4,
+  .cost5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media only screen and (max-width: 400px) {
+  /* ____HEADER__ */
   .title-nav {
     font-size: 0.9em;
   }
@@ -78,6 +153,7 @@
     font-size: 1rem;
   }
 
+  /* _____FOOTER____ */
   .footer-prescriptions {
     align-items: center;
     flex-direction: column;

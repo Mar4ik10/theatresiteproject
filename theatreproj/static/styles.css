@@ -376,7 +376,7 @@ body {
   padding: 0 0 20px 10px;
 }
 
-/*------------------------select_tickets--------------------*/
+/*------------------------select_tickets---------------------*/
 
 .tickets-title {
   width: 500px;
@@ -448,7 +448,7 @@ body {
   width: 1rem;
   align-self: center;
   display: block;
-  left: calc(50% - 1px);
+  left: calc(50% - 0.5rem);
   position: relative;
   border-radius: 50%;
 }
@@ -459,7 +459,7 @@ body {
   background-color: #b5a48d;
   height: 2px;
   width: 100%;
-  left: calc(2px);
+  left: 0;
   top: calc(50% - 5px);
 }
 
@@ -479,97 +479,76 @@ body {
 
 .mainTickets {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
+  justify-content: space-between;
+  margin: 50px 30px;
+  flex-wrap: wrap;
 }
 
-.group-13 {
+.tickets-seats {
   display: flex;
   flex-direction: column;
-  width: 754px;
-  height: 642px;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
-  border: 1px;
+  margin-left: 20px;
 }
 
-.seats-coast {
+.seats-cost {
   display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 20px;
-}
-
-.coast1,
-.coast2,
-.coast3,
-.coast4,
-.coast5 {
-  display: flex;
-  flex-direction: row;
-  margin-left: 10px;
-  margin-right: 10px;
-  text-align: center;
   justify-content: center;
 }
 
-.coast-text {
+.cost1,
+.cost2,
+.cost3,
+.cost4,
+.cost5 {
+  display: flex;
+  margin: 0 10px;
+}
+
+.cost-text {
   font-family: Alethia Next;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 22px;
-  text-align: left;
   color: #ffffff;
 }
 
-.coast1 .seat {
+.cost1 .seat {
   background-color: #a7875c;
   border: 1px solid #ffffff;
 }
 
-.coast2 .seat {
+.cost2 .seat {
   background-color: #6f3b2f;
   border: 1px solid #ffffff;
 }
 
-.coast3 .seat {
+.cost3 .seat {
   background-color: #536651;
   border: 1px solid #ffffff;
 }
 
-.coast4 .seat {
+.cost4 .seat {
   background-color: #4f4e59;
   border: 1px solid #ffffff;
 }
 
-.coast5 .seat {
+.cost5 .seat {
   background-color: #0e0d0b;
   border: 1px solid #ffffff;
 }
 
 .cinema-row {
   display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
-  align-items: center;
   justify-content: center;
 }
 
 .seat {
   background-color: #ffffff;
-  height: 24px;
-  width: 24px;
+  height: 1.3rem;
+  width: 1.3rem;
   margin: 3px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-radius: 4px;
   transition: background-color 0.3s;
 }
 
@@ -604,66 +583,42 @@ body {
 
 .seat-number-right,
 .seat-number-left {
-  width: 9px;
-  height: 14px;
   font-family: Alethia Next;
   font-size: 20px;
   font-weight: 350;
-  line-height: 29px;
-  letter-spacing: 0em;
   color: #b5a48d;
-  margin: 10px;
 }
 
 .seat-number-right {
-  margin-left: 20px;
-  margin-top: 0px;
+  margin-left: 10px;
 }
 
 .seat-number-left {
-  margin-right: 24px;
-  margin-top: 0px;
+  margin-right: 10px;
 }
 
-.frame-121 {
-  width: 611px;
-  height: 76px;
-  margin-left: auto;
-  margin-right: auto;
+.tickets-scene {
   margin-top: 50px;
   border-radius: 4px;
   border: 1px solid #b5a48d;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   font-family: Alethia Next;
   font-size: 40px;
   font-weight: 350;
-  line-height: 58px;
-  letter-spacing: 0em;
   text-align: center;
   color: #ffffff;
 }
 
-.frame-120 {
+.tickets-pay {
   display: flex;
   flex-direction: column;
-  width: 289px;
-  height: 220px;
-  margin-top: 200px;
-  margin-left: 0px;
-  margin-right: auto;
-  background-color: #53665100;
+  margin-top: 40px;
+  background-color: inherit;
 }
 
-.frame-120 .text {
-  width: 150px;
-  height: 30px;
+.tickets-pay .text {
   font-family: Alethia Next;
   font-size: 24px;
   font-weight: 350;
-  line-height: 35px;
-  letter-spacing: 0em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
@@ -671,36 +626,15 @@ body {
   background-color: rgba(255, 127, 80, 0);
 }
 
-.frame-118 {
+.your-tickets {
   display: flex;
   flex-direction: column;
-  width: 289px;
-  height: 140px;
-  background-color: rgba(127, 148, 255, 0);
-}
-
-.component-28 {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  width: auto;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(255, 127, 249, 0);
-}
-
-.frame-117 {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  width: 289px;
   height: auto;
   margin-top: 20px;
   background-color: rgba(255, 249, 127, 0);
 }
 
-.line-10 {
+.your-tickets-line {
   display: flex;
   width: 100%;
   height: 2px;
@@ -708,103 +642,60 @@ body {
   background-color: #b5a48d;
 }
 
-.frame-119 {
+.tickets-sum {
   display: flex;
-  flex-direction: row;
-  width: 289px;
-  height: 30px;
   margin-top: 10px;
   background-color: rgba(231, 30, 191, 0);
 }
 
-.frame-115,
-.frame-116 {
+.tickets-paycost {
   display: flex;
-  flex-direction: row;
   width: 289px;
   height: 20px;
   background-color: #6f3b2f00;
-}
-
-.frame-116 {
   margin-top: 10px;
 }
 
-.frame-115 .text1,
-.frame-116 .text1 {
+.tickets-paycost .text1 {
   font-family: Alethia Next;
   font-size: 16px;
   font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #ffffff;
-}
-
-.frame-115 .text2,
-.frame-116 .text2 {
-  font-family: Alethia Next;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: right;
-  margin-left: auto;
-  color: #ffffff;
-}
-
-.frame-119 .text1 {
-  width: 68px;
-  height: 11px;
-  font-family: Alethia Next;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
   white-space: nowrap;
   text-align: left;
   color: #b5a48d;
 }
 
-.frame-119 .text2 {
-  width: 45px;
-  height: 11px;
+.tickets-paycost .text2 {
   font-family: Alethia Next;
   font-size: 16px;
   font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
   text-align: right;
   margin-left: auto;
   margin-top: 0px;
   color: #b5a48d;
 }
 
-.text-28 {
-  width: 230px;
-  height: auto;
+.tickets-button {
+  display: flex;
   font-family: Alethia Next;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 27px;
-  letter-spacing: 0em;
   white-space: nowrap;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto 0 auto;
   color: #ffffff;
+  background-color: inherit;
+  border: none;
 }
 
-.line-10-2 {
-  width: 235px;
+.order-underline {
+  width: 80%;
   height: 1px;
   background-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   transform: translateY(-50%);
 }
 
-.frame-119 .text1 {
+.tickets-sum .text1 {
   font-family: Alethia Next;
   font-size: 16px;
   font-weight: 400;
@@ -814,7 +705,7 @@ body {
   color: #ffffff;
 }
 
-.frame-119 .text2 {
+.tickets-sum .text2 {
   font-family: Alethia Next;
   font-size: 16px;
   font-weight: 400;
@@ -826,11 +717,11 @@ body {
   color: #b5a48d;
 }
 
-.component-28 .text-28:hover {
+.your-tickets-form .tickets-button:hover {
   color: #b5a48d;
 }
 
-.component-28 .line-10-2:hover {
+.your-tickets-form .order-underline:hover {
   background-color: #b5a48d;
 }
 
