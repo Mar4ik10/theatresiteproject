@@ -280,299 +280,100 @@ body {
 
 /*--------------------------about_theatre-------------------------------*/
 
-.text-35 {
-  font-family: Alethia Next;
-  font-size: 48px;
-  font-weight: 350;
-  line-height: 70px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #b5a48d;
-  margin-top: 20px;
-}
-
-.mainFrame {
-  width: 100%;
-  height: auto;
+.about-title {
   display: flex;
-  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  color: #b5a48d;
+  font-family: Alethia Next;
+  font-size: 3rem;
+  font-weight: 350;
 }
 
-.centralFrame {
-  flex-basis: 1px;
-  margin-right: 8px;
-  height: auto;
-  background: #b5a48d;
+.timeline-items {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 70px;
   position: relative;
 }
 
-.rightFrame {
-  flex: 1;
-  height: 3441px;
-  align-content: center;
-}
-
-.leftFrame {
-  flex: 1;
-  height: 3441px;
-}
-
-.frame-164 {
-  display: flex;
-  flex-direction: row;
-  width: 135px;
-  height: 28px;
-  margin-left: 40%;
-}
-
-.circle1 {
-  width: 24px;
-  height: 24px;
-  background-color: #b5a48d;
-  border-radius: 50%;
+.timeline-items::before {
+  content: "";
   position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.circle2 {
-  width: 24px;
-  height: 24px;
+  width: 2px;
+  height: 100%;
   background-color: #b5a48d;
-  border-radius: 50%;
-  position: absolute;
-  top: 550px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: calc(50% - 1px);
 }
 
-.circle3 {
-  width: 24px;
+.timeline-dot {
   height: 24px;
-  background-color: #b5a48d;
-  border-radius: 50%;
-  position: absolute;
-  top: 830px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.circle4 {
   width: 24px;
-  height: 24px;
   background-color: #b5a48d;
-  border-radius: 50%;
   position: absolute;
-  top: 1220px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.circle5 {
-  width: 24px;
-  height: 24px;
-  background-color: #b5a48d;
+  left: calc(50% - 12px);
+  top: calc(10px);
   border-radius: 50%;
-  position: absolute;
-  top: 1628px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
-.circle6 {
-  width: 24px;
-  height: 24px;
-  background-color: #b5a48d;
-  border-radius: 50%;
-  position: absolute;
-  top: 1940px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.circle7 {
-  width: 24px;
-  height: 24px;
-  background-color: #b5a48d;
-  border-radius: 50%;
-  position: absolute;
-  top: 2420px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.part1 {
-  margin-right: 30px;
-  margin-top: 17px;
-}
-
-.part2 {
-  margin-right: 30px;
-  margin-top: 50px;
-}
-
-.part3 {
-  margin-right: 30px;
-  margin-top: 50px;
-}
-
-.part4 {
-  margin-right: 30px;
-  margin-top: 50px;
-}
-
-.text-years {
-  font-family: Alethia Next;
-  font-size: 40px;
-  font-weight: 350;
-  line-height: 58px;
-  text-align: right;
-  color: #b5a48d;
-}
-
-.text-caption {
-  font-family: Alethia Next;
-  font-size: 28px;
-  font-weight: 350;
-  line-height: 41px;
-  letter-spacing: 0em;
-  text-align: right;
-  margin-right: 90px;
-  color: #b5a48d;
-}
-
-.text-descrip {
-  font-family: Century Gothic;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: justify;
-  margin-right: 90px;
-  margin-left: 160px;
-  margin-top: 20px;
-  color: #ffffff;
-}
-
-.image1 {
-  width: 468px;
-  height: 472px;
-  margin-top: 40px;
-}
-
-.part5 {
-  margin-left: 30px;
-}
-
-.part5_1 {
-  display: flex;
-  flex-direction: row;
-}
-
-.part6 {
-  margin-top: 70px;
-  margin-left: 30px;
-}
-
-.part6_1 {
-  display: flex;
-  flex-direction: row;
-}
-
-.part7 {
-  margin-top: 50px;
-  margin-left: 30px;
-}
-
-.part7_1 {
-  display: flex;
-  flex-direction: row;
-}
-
-.part8 {
-  margin-top: 50px;
-  margin-left: 30px;
-}
-
-.part8_1 {
-  display: flex;
-  flex-direction: row;
-}
-
-.text-years2 {
-  font-family: Alethia Next;
-  font-size: 40px;
-  font-weight: 350;
-  line-height: 58px;
-  text-align: left;
-  color: #b5a48d;
-}
-
-.text-caption2 {
-  font-family: Alethia Next;
-  font-size: 28px;
-  font-weight: 350;
-  line-height: 41px;
-  letter-spacing: 0em;
-  text-align: left;
-  margin-left: 90px;
-  color: #b5a48d;
-}
-
-.text-descrip2 {
-  font-family: Century Gothic;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
-  text-align: justify;
-  margin-left: 90px;
-  margin-right: 90px;
-  margin-top: 20px;
-  color: #ffffff;
-}
-
-.text-descrip3 {
-  font-family: Century Gothic;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
-  text-align: justify;
-  margin-left: 40px;
-  margin-right: 20px;
-  margin-top: 350px;
-  color: #ffffff;
-}
-
-.text-descrip4 {
-  font-family: Century Gothic;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
-  text-align: justify;
-  margin-left: 90px;
-  margin-right: 90px;
+.timeline-items:nth-child(1) {
   margin-top: 30px;
+}
+
+.timeline-items:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+}
+
+.timeline-items:nth-child(odd) {
+  text-align: right;
+}
+
+.timeline-items:nth-child(even) {
+  padding-left: calc(50% + 30px);
+  text-align: left;
+}
+
+.timeline-date {
+  font-family: Alethia Next;
+  font-size: 2.4rem;
+  font-weight: 350;
+  color: #b5a48d;
+}
+
+.timeline-content {
+  padding: 0 3rem;
+  margin-bottom: 30px;
+}
+
+.timeline-caption {
+  font-family: Alethia Next;
+  font-size: 1.4rem;
+  font-weight: 350;
+  color: #b5a48d;
+  margin-bottom: 20px;
+}
+
+.timeline-descrip {
+  font-family: Century Gothic;
+  font-size: 16px;
+  font-weight: 300;
   color: #ffffff;
 }
 
-.image5 {
-  margin-top: 40px;
+.timeline-section img {
+  max-width: 100%;
+  height: auto;
 }
 
-.image6 {
-  margin-top: 40px;
-  margin-left: auto;
+.about-img-right {
+  width: 100%;
 }
 
-.image7 {
-  margin-left: 30px;
-  margin-top: 40px;
-}
-
-.image8 {
-  margin-top: 40px;
-  margin-left: auto;
+.about-img-right img {
+  float: right;
+  padding: 0 0 20px 10px;
 }
 
 /*--------------------------select_tickets-------------------------------*/
@@ -1424,15 +1225,4 @@ input:focus ~ .highlight {
   .frame-2 {
     display: none !important;
   }
-}
-
-/*  dsadadsd*/
-
-.title {
-  color: var(--beige, #b5a48d);
-  font-family: Alethia Next;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 350px;
-  line-height: normal;
 }

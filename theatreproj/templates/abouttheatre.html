@@ -1,121 +1,132 @@
 {% extends "base.html" %}{% load static %}{% block main %}
-<div class="text-35">Про театр</div>
-<div class="mainFrame">
-  <div class="rightFrame">
-    <div class="part1">
-      <div class="text-years">1918</div>
-      <div class="text-caption">Початок Шляхетного Мистецтва</div>
-      <div class="text-descrip">
+<h1 class="about-title">Про театр</h1>
+
+<section class="timeline-section">
+  <div class="timeline-items">
+    <div class="timeline-dot"></div>
+
+    <div class="timeline-content">
+      <div class="timeline-date">1918</div>
+      <h1 class="timeline-caption">Початок Шляхетного Мистецтва</h1>
+      <p class="timeline-descrip">
         В 1918 році, на тлі світових перемін та революцій, народжується "Театр
         Титанів". Це стало важливою сторінкою в історії мистецтва, коли
         засновники театру віддавали перевагу високій культурі та виразному
         акторському мистецтву.
-      </div>
-      <img src="{% static 'image1.png' %}" alt="зображення" class="image1" />
+      </p>
     </div>
-    <div class="part2">
-      <div class="text-years">1940-ві</div>
-      <div class="text-caption">Війна та Відродження</div>
-      <div class="text-descrip">
+    <div class="about-img-left">
+      <img src="{% static 'image1.png' %}" alt="зображення" />
+    </div>
+  </div>
+  <div class="timeline-items">
+    <div class="timeline-dot"></div>
+
+    <div class="timeline-content">
+      <div class="timeline-date">1920-30-ті</div>
+      <h1 class="timeline-caption">Експерименти та Розквіт</h1>
+      <p class="timeline-descrip">
+        У цей період "Театр Титанів" відзначився експериментами в сценічному
+        мистецтві, зо-крема використанням новітніх технологій та творчим
+        підходом до режисури. Вистави ста-ли більш виразними та сміливими,
+        вражаючи глядачів своєю авангардністю.
+      </p>
+    </div>
+
+    <div class="about-img-right">
+      <img src="{% static 'image7.png' %}" alt="зображення" />
+      <img src="{% static 'image6.png' %}" alt="зображення" />
+    </div>
+    <p class="timeline-descrip">
+      Тривала війна призвела до великих втрат серед акторів та персоналу театру.
+      Деякі з них були призвані на фронт і не поверну-лися, інші залишились
+      інвалідами або по-терпіли від військових дій. Це створило велику пустку в
+      театральній спільноті.
+    </p>
+  </div>
+  <div class="timeline-items">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <div class="timeline-date">1940-ві</div>
+      <h1 class="timeline-caption">Війна та Відродження</h1>
+      <p class="timeline-descrip">
         Час Другої світової війни став великим ви-пробуванням для "Театру
         Титанів", але він ви-жив завдяки мужності та відданості своїх творців.
         Після війни театр зазнав відроджен-ня, привертаючи увагу нового
-        покоління ак-торів і режисерів.
-      </div>
-      <img src="{% static 'image2.png' %}" alt="зображення" class="image1" />
+        покоління акторів і режисерів.
+      </p>
     </div>
-    <div class="part3">
-      <div class="text-years">1960-70-ті</div>
-      <div class="text-caption">Радянський Період</div>
-      <div class="text-descrip">
+    <div class="about-img-left">
+      <img src="{% static 'image2.png' %}" alt="зображення" />
+    </div>
+  </div>
+  <div class="timeline-items">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <p class="timeline-date">1950-ті</p>
+      <h1 class="timeline-caption">Післявоєнні часи</h1>
+      <p class="timeline-descrip">
+        Однак вже на початку 50-тих театр виявив надзвичайну відновлюючу силу та
+        відданість мисте-цтву. Відновлення було важким, але дуже важливим етапом
+        у його історії. Ця відданість та напо-легливість допомогли театру знову
+        стати важли-вим культурним центром та символом відродже-ння в
+        невпевнених післяво-єнних роках.
+      </p>
+    </div>
+    <div class="about-img-right">
+      <img src="{% static 'image8.png' %}" alt="зображення" />
+    </div>
+  </div>
+  <div class="timeline-items">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <p class="timeline-date">1960-70-ті</p>
+      <h1 class="timeline-caption">Радянський Період</h1>
+      <p class="timeline-descrip">
         У цей період "Театр Титанів" був вплинутий радя-нською культурною
         політикою, але зумів зберегти свою непересічність та автентичність.
         Вистави вразили аудиторію глибокими сюжетами та вра-жаючими виконаннями
         акторів.
-      </div>
-      <img src="{% static 'image3.png' %}" alt="зображення" class="image1" />
+      </p>
     </div>
-    <div class="part4">
-      <div class="text-years">2000-нині</div>
-      <div class="text-caption">Сучасність та Світові<br />Розшарування</div>
-      <div class="text-descrip">
-        У сучасний період "Театр Титанів" продовжує диву-вати та надихати
-        глядачів із своєю вишуканістю та сучасним підходом до театрального
-        мистецтва. Він залишається символом культурної спадщини та прагне долати
-        географічні межі, взаємодіючи з митцями та аудиторією з усього світу.
-      </div>
-      <img src="{% static 'image4.png' %}" alt="зображення" class="image1" />
+    <div class="about-img-left">
+      <img src="{% static 'image3.png' %}" alt="зображення" />
     </div>
   </div>
-  <div class="centralFrame">
-    <div class="circle1"></div>
-    <div class="circle2"></div>
-    <div class="circle3"></div>
-    <div class="circle4"></div>
-    <div class="circle5"></div>
-    <div class="circle6"></div>
-    <div class="circle7"></div>
-  </div>
-  <div class="leftFrame">
-    <div class="part5">
-      <div class="part5_1">
-        <div class="text-descrip3">
-          У цей період було створено фундаментальні театральні традиції, які
-          залишались важливими для розвитку театру.
-        </div>
-        <img src="{% static 'image5.png' %}" alt="зображення" class="image5" />
-      </div>
-    </div>
-    <div class="part6">
-      <div class="text-years2">1920-30-ті</div>
-      <div class="text-caption2">Експерименти та Розквіт</div>
-      <div class="text-descrip2">
-        У цей період "Театр Титанів" відзначився екс-периментами в сценічному
-        мистецтві, зо-крема використанням новітніх технологій та творчим
-        підходом до режисури. Вистави ста-ли більш виразними та сміливими,
-        вра-жаючи глядачів своєю авангардністю.
-      </div>
-      <div class="part6_1">
-        <img src="{% static 'image6.png' %}" alt="зображення" class="image6" />
-        <img src="{% static 'image7.png' %}" alt="зображення" class="image7" />
-      </div>
-    </div>
-    <div class="part7">
-      <div class="text-years2">1950-ті</div>
-      <div class="text-caption2">Післявоєнні часи</div>
-      <div class="text-descrip2">
-        Однак вже на початку 50-тих театр виявив над-звичайну відновлюючу силу
-        та відданість мисте-цтву. Відновлення було важким, але дуже важли-вим
-        етапом у його історії. Ця відданість та напо-легливість допомогли театру
-        знову стати важли-вим культурним центром та символом відродже-ння в
-        невпевнених післяво-єнних роках.
-      </div>
-      <div class="part7_1">
-        <img src="{% static 'image8.png' %}" alt="зображення" class="image6" />
-      </div>
-    </div>
-    <div class="part8">
-      <div class="text-years2">1980-90-ті</div>
-      <div class="text-caption2">Гласність та Творча Свобода</div>
-      <div class="text-descrip2">
+  <div class="timeline-items">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <p class="timeline-date">1980-90-ті</p>
+      <h1 class="timeline-caption">Гласність та Творча Свобода</h1>
+      <p class="timeline-descrip">
         З кінця 1980-х років "Театр Титанів" знову став символом творчої свободи
         та гласності. Театра-льні вистави відзначилися відвертістю та
         актуа-льністю сюжетів, що відображали соціокультурні зміни та дискусії
         того часу. У творчості театру виділялися сміливі експерименти з формами
         і жанрами, що сприяли появі нових інноваційних підходів до театрального
         мистецтва та залученню молодого покоління артистів та глядачів.
-      </div>
-      <div class="part7_1">
-        <img src="{% static 'image9.png' %}" alt="зображення" class="image6" />
-      </div>
-      <div class="text-descrip4">
-        За багато віків існування "Театр Титанів" став відомим не лише своїми
-        вражаючими виста-вами, але й символом мистецької стійкості і
-        інноваційного духу. Наша історія є частиною всесвітнього дороговказу
-        мистецтва, і ми го-рді продовжувати цей захоплюючий шлях разом з вами.
-      </div>
+      </p>
+    </div>
+    <div class="about-img-right">
+      <img src="{% static 'image9.png' %}" alt="зображення" />
     </div>
   </div>
-</div>
+  <div class="timeline-items">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <p class="timeline-date">2000-нині:</p>
+      <h1 class="timeline-caption">Сучасність та Світові Розшарування</h1>
+      <p class="timeline-descrip">
+        У сучасний період "Театр Титанів" продовжує диву-вати та надихати
+        глядачів із своєю вишуканістю та сучасним підходом до театрального
+        мистецтва. Він залишається символом культурної спадщини та прагне долати
+        географічні межі, взаємодіючи з митцями та аудиторією з усього світу.
+      </p>
+    </div>
+    <div class="about-img-left">
+      <img src="{% static 'image4.png' %}" alt="зображення" />
+    </div>
+  </div>
+</section>
 
 {% endblock %}

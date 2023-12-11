@@ -20,7 +20,24 @@
   }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 750px) {
+  .timeline-items::before {
+    left: 11px;
+  }
+
+  .timeline-items:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-items:nth-child(odd),
+  .timeline-items:nth-child(even) {
+    padding-left: 40px;
+  }
+
+  .timeline-dot {
+    left: 0;
+  }
 }
 
 @media only screen and (max-width: 500px) {
