@@ -38,6 +38,10 @@
   .timeline-dot {
     left: 0;
   }
+
+  .timeline-date {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -47,6 +51,18 @@
 
   .nav .nav-links a {
     font-size: 1.3em;
+  }
+
+  .row1-afisha {
+    flex-direction: column;
+    align-items: center;
+  }
+  .row-afisha {
+    justify-content: center;
+  }
+  .main-afisha {
+    transition: all 0.5s ease;
+    margin: 0;
   }
 }
 

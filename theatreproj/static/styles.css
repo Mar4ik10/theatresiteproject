@@ -872,10 +872,11 @@ body {
   background-color: #b5a48d;
 }
 
-/* Afisha */
+/* -----------------------------------------Afisha------------------------------------ */
 
 .main-afisha {
   margin: 10px 80px;
+  transition: margin 0.3s ease;
 }
 
 .row1-afisha {
