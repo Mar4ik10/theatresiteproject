@@ -1,28 +1,20 @@
 {% extends "base.html" %}{% load static %}{% block main %}
-<div class="text-tickets">{{ theatre.title }}</div>
-<div class="frame-134">
-  <div class="frame-86">
-    <div class="date">
+<h1 class="tickets-title">{{ theatre.title }}</h1>
+<div class="tickets-header">
+  <div class="tickets-info">
+    <div class="tickets-date">
       {{ theatre.formatted_date }} | {{ theatre.formatted_time }}
     </div>
-    <div class="genre">
+    <div class="tickets-genre">
       {{ theatre.genre }} | {{ theatre.typescene }} | {{ theatre.num_scene }}
       дії
     </div>
-    <div class="author">{{ theatre.author }}</div>
+    <div class="tickets-author">{{ theatre.author }}</div>
   </div>
-  <div class="group-10">
-    <div class="line9">
-      <div class="circle9">
-        <div class="text">Вибір квитків</div>
-      </div>
-      <div class="circle9">
-        <div class="text">Оформлення</div>
-      </div>
-      <div class="circle9">
-        <div class="text">Оплата</div>
-      </div>
-    </div>
+  <div class="tickets-steps">
+    <div class="progress-text">Вибір квитків</div>
+    <div class="progress-text">Оформлення</div>
+    <div class="progress-text">Оплата</div>
   </div>
 </div>
 <div class="mainTickets">
