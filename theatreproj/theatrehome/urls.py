@@ -19,4 +19,5 @@ urlpatterns = [
     re_path(r'^robots\.txt$', TemplateView.as_view(template_name="theatreproj/robots.txt", content_type="text/plain")),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
     path("placingOrder/", views.placingOrder, name="placingOrder"),
+    path("nextOrder/", views.nextOrder, name="nextOrder"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,104 @@
+{% extends "base.html" %}{% load static %}{% block main %}
+<style>
+  .progress-text:nth-child(3)::before {
+    height: 1.5rem;
+    width: 1.5rem;
+    top: calc(50% - 2.3rem);
+  }
+</style>
+
+<div class="tickets-title">Кохання в стилі бароко, або любов з неохоти</div>
+<div class="tickets-header">
+  <div class="tickets-info">
+    <div class="tickets-date">Сб, 7 / 10 / 2023 | 18:00-20:00</div>
+    <div class="tickets-genre">Комедія-фарс | Основна сцена | 2 дії</div>
+    <div class="tickets-author">Ярослав Стельмах</div>
+  </div>
+  <div class="tickets-steps">
+    <div class="progress-text">Вибір квитків</div>
+    <div class="progress-text">Оформлення</div>
+    <div class="progress-text">Оплата</div>
+  </div>
+</div>
+<div class="order-tickets">
+  <div class="order-form">
+    <div class="text">Заповніть форму даними</div>
+    <div class="order-form-content">
+      <form method="post">
+        <div class="group">
+          <input type="text" required />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Ім'я</label>
+        </div>
+
+        <div class="group">
+          <input type="text" maxlength="19" required />
+          <span class="bar"></span>
+          <span class="highlight"></span>
+          <label>Номер картки</label>
+        </div>
+
+        <div class="group-card-info">
+          <div class="group">
+            <select name="months" id="months">
+              <option value="1">Січень</option>
+              <option value="2">Березень</option>
+              <option value="3">Червень</option>
+              <option value="4">Вересень</option>
+            </select>
+          </div>
+
+          <div class="group">
+            <input type="text" inputmode="numeric" maxlength="4" required />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Рік</label>
+          </div>
+
+          <div class="group">
+            <input type="text" inputmode="numeric" maxlength="4" required />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>CVC</label>
+          </div>
+        </div>
+
+        <div class="order-form-buy">
+          <button style="justify-content: center" class="order-form-button-pay">
+            <b>Сплатити</b>
+          </button>
+          <div style="width: 100px" class="order-form-underline"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="tickets-pay">
+    <div style="white-space: normal; text-align: center" class="text">
+      Інформація про замовлення
+    </div>
+    <div class="your-tickets">
+      <div style="width: 320px" class="tickets-paycost">
+        <div class="text1">Назва</div>
+        <div class="text2">Кохання в стилі бароко..</div>
+      </div>
+      <div style="width: 320px" class="tickets-paycost">
+        <div class="text1">Дата</div>
+        <div class="text2">Сб, 7 / 10 / 2023 | 18:00-20:00</div>
+      </div>
+
+      <div style="width: 320px" class="tickets-paycost">
+        <div class="text1">Включено</div>
+        <div class="text2">2 квитки</div>
+      </div>
+      <br />
+      <div style="width: 320px" class="tickets-sum">
+        <div class="text1"><b>Всього</b></div>
+        <div class="text2">600₴</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

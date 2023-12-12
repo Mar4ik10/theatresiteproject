@@ -7,19 +7,14 @@ def index(request):
     theatshowall = models.TheatreShow.objects.all()
     return render(request, "index.html")
 
+
 def contact(request):
     return render(request, "contact.html")
+
 
 def abouttheatre(request):
     return render(request, "abouttheatre.html")
 
-def selectTickets(request, slug):
-    theatshow = models.TheatreShow.objects.get(slug=slug)
-    return render(request, "selectTickets.html", {
-        "theatre": theatshow
-    })
-def placingOrder(request):
-    return render(request, "placingOrder.html")
 
 def afisha(request):
     theatshowall = models.TheatreShow.objects.all()
@@ -43,3 +38,18 @@ def afisha(request):
         theatreshowsbysearch = theatshowall.filter(title__icontains=searched.lower())
         return render(request, "afisha.html", {"theatre": theatreshowsbysearch, "searched": searched})
     return render(request, "afisha.html", {"theatre": theatshowall})
+
+
+def selectTickets(request, slug):
+    theatshow = models.TheatreShow.objects.get(slug=slug)
+    return render(request, "selectTickets.html", {
+        "theatre": theatshow
+    })
+
+
+def placingOrder(request):
+    return render(request, "placingOrder.html")
+
+
+def nextOrder(request):
+    return render(request, "nextOrder.html")

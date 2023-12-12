@@ -821,16 +821,6 @@ body {
   background-color: rgba(236, 255, 127, 0);
 }
 
-.frame-120-2 {
-  display: flex;
-  flex-direction: column;
-  width: 289px;
-  height: 160px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(139, 69, 113, 0);
-}
-
 .order-form .text {
   font-family: Alethia Next;
   font-size: 1.6rem;
@@ -844,8 +834,6 @@ body {
 .order-form-content {
   display: flex;
   flex-direction: column;
-  width: auto;
-  height: auto;
   margin-top: 50px;
 }
 
@@ -921,8 +909,6 @@ body {
 
 .order-form-content .highlight {
   position: absolute;
-  height: 60%;
-  width: 100px;
   top: 25%;
   left: 0;
   pointer-events: none;
@@ -964,12 +950,15 @@ body {
 }
 
 .order-form-button-pay {
+  display: flex;
   width: 200px;
   font-family: Alethia Next;
   font-size: 20px;
   font-weight: 400;
   white-space: nowrap;
   margin: 25px auto 0 auto;
+  background-color: inherit;
+  border: none;
   color: #ffffff;
 }
 
@@ -985,15 +974,39 @@ body {
   color: #b5a48d;
 }
 
-/* MEDIA QUERY START */
+/* ____________________NEXT ORDER___________________ */
 
-@media screen and (max-width: 500) {
-  .text7 {
-    font-size: 5px;
-    letter-spacing: normal;
-  }
+.group-card-info {
+  display: flex;
+}
 
-  .frame-2 {
-    display: none !important;
-  }
+.group-card-info .group {
+  width: 70px;
+  margin-left: 40px;
+}
+
+.group-card-info .group:nth-child(1) {
+  margin: 0;
+}
+
+.group-card-info select {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100px;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: #0e0d0b;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: Alethia Next;
+}
+
+.group-card-info input {
+  width: 70px;
+  margin: 0;
+}
+
+.group-card-info .bar {
+  width: 70px;
 }
