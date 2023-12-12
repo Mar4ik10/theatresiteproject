@@ -230,6 +230,7 @@ body {
   pointer-events: auto;
 }
 .contentScreen { 
+  position: static;
   background-clip: padding-box;
   background-image: url(image22.png);
   background-size:cover;
@@ -237,10 +238,13 @@ body {
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
+  min-width: auto;
+  min-height: 854px;
   background-origin: border-box;
 } 
 .desc {
-  margin-bottom: 20px;
+  position: static;
+  margin-top:  300px;
 }
 .contentDescData {
   color: var(--white, #FFF);
@@ -248,19 +252,25 @@ body {
   font-size: 24px;
   font-weight: 350;
   margin-bottom: 20px;
-  min-height: auto;
   padding-left: 80px;
-  margin-top: 532px;
+  margin-top: 582px;
 }
 .contentDesc {
+  position: relative;
+  display: flexbox;
   color: var(--white, #FFF);
   font-display: flex;
   font-family: Alethia Next;
-  max-height: 945px;
+  max-height: 845px;
+  max-width: auto;
   padding-right:255px;
   font-size: 32px;
   font-weight: 350;
   padding-left: 80px;
+  font-style: normal;
+  line-height: normal;
+  margin-top: 20px;
+  
 }
 
 /* Coming soon */ 
@@ -282,7 +292,7 @@ body {
   font-style: normal;
   font-weight: 350px;
   line-height: normal;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 .cardsContainer {
   display: border-box;
@@ -374,14 +384,82 @@ body {
 
 /* About Theatre main block */
 .abouttheatre{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   margin-left: 80px;
+  padding-right: 80px;
+  max-width: 1120px;
+}
+.contentBlocks {
+  display: flex;
+  flex-direction: row;
+}
+.leftBlock {
+  display: border-box;
+  align-items: flex-start;
+  padding-bottom: 50px;
+  width: 400px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 100px;
 }
 .descAbThe {
-  width: 740px;
-  height: 500px;
+  position: relative;
+  display: flexbox;
+  text-align: left;
+  font-family: Alethia Next;
+  width: 550px;
+  max-height: 200px;
+  color: #FFF;
+  margin-top: 20px;
+  margin-left: 190px;
+  margin-right: 20px;
 }
+.rightBlock {
+  display: border-box;
+  align-items: flex-start;
+  padding-bottom: 50px;
+  width: 333px;
+  height: auto;
+  margin-left: 350px;
+  margin-top: 250px;
+  padding-right: auto;
+  margin-bottom: 100px;
+}
+.aboutTheatreMainTitle {
+  color: var(--white, #FFF);
+  font-family: Century Gothic;
+  font-size: 80px;
+  display: border-box;
+  text-align: left;
+  font-weight: 400;
 
-/*  */
+}
+.aboutTheatreMainRB {
+  display: border-box;
+  text-align: left;
+  color: var(--beige, #B5A48D);
+  font-family: Alethia Next;
+  font-size: 24px;
+  height: 60px;
+  width: auto;
+  font-weight: 350;
+}
+.aboutTheLink {
+  position: relative;
+  display: border-box;
+  color: var(--white, #FFF);
+  font-family: Alethia Next;
+  font-size: 20px;
+  font-weight: 400;
+  width: 333px;
+  left: 200px;
+  top: 20px;
+}
 
 /*--------------------------footer-------------------------------*/
 

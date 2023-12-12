@@ -26,7 +26,7 @@
         <div class="mainContent">
             
             <div class="box contentScreen"  alt="component9">
-                <nav class="navMain">
+                <nav class="nav">
                     <i class="uil uil-bars navOpenBtn"></i>
                     <ul class="nav-links">
                       <i class="uil uil-times navCloseBtn" style="font-size: 2rem"></i>
@@ -113,21 +113,71 @@
         <!-- About Theatre-->
         <div class="box abouttheatre" alt="abouttheatre">
           <p class="titlemc" style="text-align: center;">Про театр</p>
-          <div>
-            <div>
+          <div class="contentBlocks">
+            <div class="box leftBlock">
               <img src="{% static 'image27.png' %}">
-              <p class="descAbThe">
+              <p class="box descAbThe">
                 Театр Титанів - це інноваційна мистецька платформа, яка об'єднує традиційний театр і сучасне мистецтво. Вистави цього театру вра-жають не лише візуально і аудіально, але й залишають за собою слід у серцях глядачів, надихаючи їх думати і відчувати глибше. Тут майстерно поєднується різні мистецькі жанри, включаючи драму і танець, гумор і трагедію, хорор і фантазію.
               </p>
             </div>
-            <div>
-              
+            <div class="box rightBlock">
+              <h1 class="aboutTheatreMainTitle">Театр Титанів –</h1>
+              <p class="aboutTheatreMainRB">місце, де митецтво воскрешає богів</p>
+              <p class="box descAbThe" style="margin-left: 0px;">Театр зачаровує глядачів своєю акторською майстерністю та здатністю створювати непо-вторні театральні враження. Завдяки акто-рам, кожна вистава стає видатною по-дією, де ви зможете відкрити для себе спра-вжню силу та магію театрального мистецтва.</p>
+              <p class="box aboutTheLink"> <a href="{% url 'abouttheatre' %}" style="color: aliceblue;">Більше про історію театру</a></p>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Contacts -->
+        <div class="contact-page">
+          <h1 class="contact-title">Контакти</h1>
+          <div class="contact-container">
+            <div class="contact-left">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.552174995245!2d30.50602897680915!3d50.46806337159554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce6cbd00fab7%3A0xf5b793dd5a26551f!2z0LLRg9C70LjRhtGPINCp0LXQutCw0LLQuNGG0YzQutCwLCA1LCDQmtC40ZfQsiwg0KPQutGA0LDRl9C90LAsIDAyMDAw!5e0!3m2!1suk!2sde!4v1701382023868!5m2!1suk!2sde"
+                width="600px"
+                height="450px"
+                style="border: 0"
+                allowfullscreen=""
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="contact-right">
+              <div class="contact-address">
+                <h1 style="color: #b5a48d;">Адреса</h1>
+                <p style="color: #fff;">
+                  Україна, 01001, м. Київ-1, вул.Щекавиця<br />5 (ст. метро "Контрактова
+                  площа").
+                </p>
+              </div>
+              <div class="contact-kassa">
+                <h1 style="color: #b5a48d;">Каси</h1>
+                <p style="color: #fff;">
+                  +38 (048) 870-15-09 <br />
+                  tt.booking@gmail.com
+                </p>
+              </div>
+              <div class="contact-pryimalnia">
+                <h1 style="color: #b5a48d;">Приймальня</h1>
+                <p style="color: #fff;">
+                  +38 (048) 722-22-30 <br />
+                  tt.booking@gmail.com
+                </p>
+              </div>
+              <div class="contact-presa">
+                <h1 style="color: #b5a48d;">Для преси</h1>
+                <p style="color: #fff;">
+                  +38 (048) 730-22-30<br />
+                  tt.booking@gmail.com
+                </p>
+              </div>
             </div>
           </div>
         </div>
     </main>
 
-    <footer>
+    <footer mainContentFooter>
       <hr style="border-color: #b5a48d" />
       <div class="footer-container">
         <div class="hidden-footer-center">
