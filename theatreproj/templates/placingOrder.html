@@ -1,29 +1,29 @@
 {% extends "base.html" %}{% load static %}{% block main %}
-<div class="text-tickets">Кохання в стилі бароко, або любов з неохоти</div>
-<div class="frame-134">
-  <div class="frame-86">
-    <div class="date">Сб, 7 / 10 / 2023 | 18:00-20:00</div>
-    <div class="genre">Комедія-фарс | Основна сцена | 2 дії</div>
-    <div class="author">Ярослав Стельмах</div>
+<style>
+  .progress-text:nth-child(2)::before {
+    height: 1.5rem;
+    width: 1.5rem;
+    top: calc(50% - 2.3rem);
+  }
+</style>
+
+<div class="tickets-title">Кохання в стилі бароко, або любов з неохоти</div>
+<div class="tickets-header">
+  <div class="tickets-info">
+    <div class="tickets-date">Сб, 7 / 10 / 2023 | 18:00-20:00</div>
+    <div class="tickets-genre">Комедія-фарс | Основна сцена | 2 дії</div>
+    <div class="tickets-author">Ярослав Стельмах</div>
   </div>
-  <div class="group-10">
-    <div class="line9">
-      <div class="circle10">
-        <div class="text">Вибір квитків</div>
-      </div>
-      <div class="circle10">
-        <div class="text">Оформлення</div>
-      </div>
-      <div class="circle10">
-        <div class="text">Оплата</div>
-      </div>
-    </div>
+  <div class="tickets-steps">
+    <div class="progress-text">Вибір квитків</div>
+    <div class="progress-text">Оформлення</div>
+    <div class="progress-text">Оплата</div>
   </div>
 </div>
-<div class="frame-144">
-  <div class="frame-143">
+<div class="order-tickets">
+  <div class="order-form">
     <div class="text">Заповніть форму даними</div>
-    <div class="frame-141">
+    <div class="order-form-content">
       <form method="post">
         <div class="group">
           <input type="text" required />
@@ -52,31 +52,30 @@
           <span class="bar"></span>
           <label>Телефон</label>
         </div>
+
+        <div class="order-form-buy">
+          <div class="order-form-button-pay">Перейти до оплати</div>
+          <div class="order-form-underline"></div>
+        </div>
       </form>
-    </div>
-    <div class="component-28-2">
-      <div class="text-28-2">Перейти до оплати</div>
-      <div class="line-10-3"></div>
     </div>
   </div>
 
-  <div class="frame-120-2">
+  <div class="tickets-pay">
     <div class="text">Ваші квитки</div>
-    <div class="frame-118">
-      <div class="frame-117">
-        <div class="frame-115">
-          <div class="text1">Партер, ряд 2, місце 11</div>
-          <div class="text2">300₴</div>
-        </div>
-        <div class="frame-116">
-          <div class="text1">Партер, ряд 2, місце 12</div>
-          <div class="text2">300₴</div>
-        </div>
-        <div class="line-10"></div>
-        <div class="frame-119">
-          <div class="text1">2 квитки</div>
-          <div class="text2">600₴</div>
-        </div>
+    <div class="your-tickets">
+      <div class="tickets-paycost">
+        <div class="text1">Партер, ряд 2, місце 11</div>
+        <div class="text2">300₴</div>
+      </div>
+      <div class="tickets-paycost">
+        <div class="text1">Партер, ряд 2, місце 12</div>
+        <div class="text2">300₴</div>
+      </div>
+      <div class="your-tickets-line"></div>
+      <div class="tickets-sum">
+        <div class="text1">2 квитки</div>
+        <div class="text2">600₴</div>
       </div>
     </div>
   </div>

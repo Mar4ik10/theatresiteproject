@@ -1,4 +1,13 @@
 {% extends "base.html" %}{% load static %}{% block main %}
+
+<style>
+  .progress-text:nth-child(1)::before {
+    height: 1.5rem;
+    width: 1.5rem;
+    top: calc(50% - 2.3rem);
+  }
+</style>
+
 <h1 class="tickets-title">{{ theatre.title }}</h1>
 <div class="tickets-header">
   <div class="tickets-info">

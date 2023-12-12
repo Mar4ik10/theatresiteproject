@@ -391,7 +391,6 @@ body {
 .tickets-header {
   display: flex;
   margin-left: 80px;
-  flex: 1;
 }
 
 .tickets-info {
@@ -461,12 +460,6 @@ body {
   width: 100%;
   left: 0;
   top: calc(50% - 5px);
-}
-
-.progress-text:nth-child(1)::before {
-  height: 1.5rem;
-  width: 1.5rem;
-  top: calc(50% - 2.3rem);
 }
 
 .progress-text {
@@ -652,27 +645,27 @@ body {
   display: flex;
   width: 289px;
   height: 20px;
-  background-color: #6f3b2f00;
+  background-color: inherit;
   margin-top: 10px;
 }
 
 .tickets-paycost .text1 {
   font-family: Alethia Next;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   white-space: nowrap;
   text-align: left;
-  color: #b5a48d;
+  color: #fff;
 }
 
 .tickets-paycost .text2 {
   font-family: Alethia Next;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   text-align: right;
   margin-left: auto;
   margin-top: 0px;
-  color: #b5a48d;
+  color: #fff;
 }
 
 .tickets-button {
@@ -812,65 +805,19 @@ body {
   display: flex;
   justify-content: space-between;
 }
-/* SELECT CSS */
+/*------------------------placing_order--------------------*/
 
-/* End of select */
-
-/* Date input */
-
-/*--------------------------placing_order-------------------------------*/
-
-.circle10 {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #000;
-  top: 50%;
-  transform: translateY(-50%);
-  left: calc(50% - 100px);
-  background-color: #b5a48d;
+.order-tickets {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.circle10:nth-child(1) {
-  left: calc(33.33% - 200px);
-}
-
-.circle10:nth-child(2) {
-  left: calc(50%);
-  width: 20px;
-  height: 20px;
-}
-
-.circle10:nth-child(3) {
-  left: calc(66.66% + 200px);
-}
-
-.frame-144 {
-  display: flex;
-  flex-direction: row;
-  width: 879px;
-  height: auto;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   background-color: rgba(127, 255, 212, 0);
 }
 
-.frame-143 {
+.forder-form {
   display: flex;
   flex-direction: column;
-  width: 306px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
   background-color: rgba(236, 255, 127, 0);
 }
 
@@ -881,25 +828,20 @@ body {
   height: 160px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
-  margin-bottom: auto;
   background-color: rgba(139, 69, 113, 0);
 }
 
-.frame-143 .text {
-  width: 306px;
-  height: 17px;
+.order-form .text {
   font-family: Alethia Next;
-  font-size: 24px;
+  font-size: 1.6rem;
   font-weight: 350;
   line-height: 35px;
-  letter-spacing: 0em;
   text-align: left;
   margin-top: 0px;
   color: #b5a48d;
 }
 
-.frame-141 {
+.order-form-content {
   display: flex;
   flex-direction: column;
   width: auto;
@@ -907,12 +849,12 @@ body {
   margin-top: 50px;
 }
 
-.frame-141 .group {
+.order-form-content .group {
   position: relative;
   margin-bottom: 28px;
 }
 
-.frame-141 input {
+.order-form-content input {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
@@ -925,11 +867,11 @@ body {
   font-family: Alethia Next;
 }
 
-.frame-141 input:focus {
+.order-form-content input:focus {
   outline: none;
 }
 
-label {
+.order-form-content label {
   color: #ffffff;
   font-size: 15px;
   font-family: Alethia Next;
@@ -941,8 +883,8 @@ label {
   transition: 0.2s ease all;
 }
 
-input:focus ~ label,
-input:valid ~ label {
+.order-form-content input:focus ~ label,
+.order-form-content input:valid ~ label {
   top: -20px;
   font-size: 14px;
   color: #b5a48d;
@@ -972,12 +914,12 @@ input:valid ~ label {
   right: 50%;
 }
 
-input:focus ~ .bar:before,
-input:focus ~ .bar:after {
+.order-form-content input:focus ~ .bar:before,
+.order-form-content input:focus ~ .bar:after {
   width: 50%;
 }
 
-.highlight {
+.order-form-content .highlight {
   position: absolute;
   height: 60%;
   width: 100px;
@@ -987,7 +929,7 @@ input:focus ~ .bar:after {
   opacity: 0.5;
 }
 
-input:focus ~ .highlight {
+.order-form-content input:focus ~ .order-form-content .highlight {
   -webkit-animation: inputHighlighter 0.3s ease;
   -moz-animation: inputHighlighter 0.3s ease;
   animation: inputHighlighter 0.3s ease;
@@ -1021,46 +963,25 @@ input:focus ~ .highlight {
   }
 }
 
-.frame-120-2 .text {
-  width: 150px;
-  height: 30px;
-  font-family: Alethia Next;
-  font-size: 24px;
-  font-weight: 350;
-  line-height: 35px;
-  letter-spacing: 0em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  color: #b5a48d;
-  background-color: rgba(255, 127, 80, 0);
-}
-
-.text-28-2 {
-  width: 196px;
-  height: auto;
+.order-form-button-pay {
+  width: 200px;
   font-family: Alethia Next;
   font-size: 20px;
   font-weight: 400;
-  line-height: 27px;
-  letter-spacing: 0em;
   white-space: nowrap;
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 25px auto 0 auto;
   color: #ffffff;
 }
 
-.line-10-3 {
-  width: 196px;
+.order-form-underline {
+  width: 200px;
   height: 1px;
   background-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   transform: translateY(-50%);
 }
 
-.component-28-2 .text-28-2:hover {
+.order-form-buy .order-form-button-pay:hover {
   color: #b5a48d;
 }
 
