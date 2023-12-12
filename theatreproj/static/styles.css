@@ -1044,3 +1044,23 @@ body {
 .group-card-info .bar {
   width: 70px;
 }
+
+/* _______SUCCESS PAGE____ */
+
+.success-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.success-center svg {
+  margin: 50px 0 20px;
+}
+
+.success-center h2 {
+  color: #b5a48d;
+  font-size: 1.3rem;
+  font-weight: 350;
+  font-family: Alethia Next;
+}

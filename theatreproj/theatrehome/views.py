@@ -53,3 +53,7 @@ def placingOrder(request):
 
 def nextOrder(request):
     return render(request, "nextOrder.html")
+
+
+def successPay(request):
+    return render(request, "successPay.html")

@@ -20,4 +20,5 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
     path("placingOrder/", views.placingOrder, name="placingOrder"),
     path("nextOrder/", views.nextOrder, name="nextOrder"),
+    path("successPay/", views.successPay, name="successPay"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

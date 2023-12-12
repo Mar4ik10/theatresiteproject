@@ -54,3 +54,4 @@ class Seat(models.Model):
 class BookedSeats(models.Model):
     show = models.ForeignKey(TheatreShow, on_delete=models.CASCADE)
     seat = models.ForeignKey(Seat, on_delete=models.CASCADE)
+    
