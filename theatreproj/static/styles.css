@@ -483,6 +483,12 @@ body {
   margin-left: 20px;
 }
 
+.group-cost {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+
 .seats-cost {
   display: flex;
   margin-bottom: 20px;
@@ -495,7 +501,12 @@ body {
 .cost4,
 .cost5 {
   display: flex;
+  height: 1.3rem;
+  width: 1.3rem;
   margin: 0 10px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
 }
 
 .cost-text {
@@ -505,27 +516,27 @@ body {
   color: #ffffff;
 }
 
-.cost1 .seat {
+.cost1 {
   background-color: #a7875c;
   border: 1px solid #ffffff;
 }
 
-.cost2 .seat {
+.cost2 {
   background-color: #6f3b2f;
   border: 1px solid #ffffff;
 }
 
-.cost3 .seat {
+.cost3 {
   background-color: #536651;
   border: 1px solid #ffffff;
 }
 
-.cost4 .seat {
+.cost4 {
   background-color: #4f4e59;
   border: 1px solid #ffffff;
 }
 
-.cost5 .seat {
+.cost5 {
   background-color: #0e0d0b;
   border: 1px solid #ffffff;
 }

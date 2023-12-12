@@ -39,8 +39,9 @@
         <i class="uil uil-search search-icon" id="searchIcon"></i>
 
         <div class="search-box">
-          <form action="{% url 'afisha' %}" method="post">
+          <form action="{% url 'afisha' %}" method="get">
             {% csrf_token %}
+            <input type="hidden" name="form_type" value="search_form">
             <button
               class="uil uil-search search-icon"
               style="
@@ -55,7 +56,6 @@
               type="search-input"
               name="search"
               placeholder="Пошук..."
-              required
             />
           </form>
         </div>

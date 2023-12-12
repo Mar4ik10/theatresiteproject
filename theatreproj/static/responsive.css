@@ -85,6 +85,12 @@
     width: 12px;
     height: 12px;
   }
+
+  .group-cost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 500px) {

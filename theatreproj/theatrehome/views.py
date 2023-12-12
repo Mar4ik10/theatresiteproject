@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . import models
 
 # Create your views here.
@@ -17,12 +17,15 @@ def abouttheatre(request):
 
 
 def afisha(request):
+
+    form_type = request.GET.get('form_type')
     theatshowall = models.TheatreShow.objects.all()
     scenevalues = {'mainscene': "Основна сцена", 'camscene': "Камерна сцена"}
-        
-    if request.method =="GET":
+
+    if form_type == 'filter_form':
         date_filter = request.GET.get('input-date', None)
         typeofscene = request.GET.get('input-select', None)
+        
         if date_filter:
             theatreshows = theatshowall.filter(date=date_filter)
             return render(request, "afisha.html", {"theatre": theatreshows})
@@ -32,12 +35,17 @@ def afisha(request):
                 if typeofscene == i:
                     theatreshows = theatshowall.filter(typescene=j)
                     return render(request, "afisha.html", {"theatre": theatreshows})
-    
-    if request.method == "POST":
-        searched = request.POST['search']
-        theatreshowsbysearch = theatshowall.filter(title__icontains=searched.lower())
+            return redirect('/afisha/')
+
+    elif form_type == 'search_form':
+        searched = request.GET.get('search', '')
+        theatreshowsbysearch = theatshowall.filter(title__icontains=searched)
         return render(request, "afisha.html", {"theatre": theatreshowsbysearch, "searched": searched})
-    return render(request, "afisha.html", {"theatre": theatshowall})
+
+    else:
+        # Handle other cases or return the default page
+        return render(request, "afisha.html", {"theatre": theatshowall})
+    
 
 
 def selectTickets(request, slug):
