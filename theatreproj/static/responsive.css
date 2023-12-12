@@ -103,7 +103,14 @@
     flex-direction: column;
     align-items: center;
   }
+
+  #filter-form {
+    flex-direction: column;
+  }
+
   .row-afisha {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
   .main-afisha {

@@ -732,6 +732,40 @@ body {
   color: #b5a48d;
 }
 
+.row-afisha {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#input-select {
+  font-size: 18px;
+  padding: 10px 5px;
+  display: flex;
+  border: none;
+  background-color: #0e0d0b;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: Alethia Next;
+}
+
+#filter-form {
+  display: flex;
+}
+
+#filter-form input {
+  font-size: 18px;
+  padding: 10px 5px;
+  display: flex;
+  border: none;
+  outline: none;
+  background-color: #0e0d0b;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: Alethia Next;
+  color-scheme: dark;
+  flex-wrap: wrap;
+}
+
 .card-section-afisha {
   display: flex;
   justify-content: center;
