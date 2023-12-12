@@ -1054,6 +1054,14 @@ body {
   justify-content: center;
   margin-bottom: 50px;
 }
+
+.success-center h1 {
+  font-family: Alethia Next;
+  color: white;
+  font-weight: 350;
+  font-size: 2rem;
+}
+
 .success-center svg {
   margin: 50px 0 20px;
 }
