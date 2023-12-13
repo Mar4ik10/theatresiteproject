@@ -240,8 +240,8 @@
       <div class="seat" row="4" number="6" price="200"></div>
       <div class="seat" row="4" number="7" price="200"></div>
       <div class="seat" row="4" number="8" price="200"></div>
-      <div class="seat" row="4" number="9" price="200"></div>
-      <div class="seat" row="4" number="10" price="200"></div>
+      <div class="seat occupied" row="4" number="9" price="200"></div>
+      <div class="seat occupied" row="4" number="10" price="200"></div>
       <div class="seat" row="4" number="11" price="200"></div>
       <div class="seat" row="4" number="12" price="200"></div>
       <div class="seat" row="4" number="13" price="200"></div>
@@ -279,7 +279,7 @@
       <div class="seat-number-left">2</div>
       <div class="seat" row="2" number="1" price="150"></div>
       <div class="seat" row="2" number="2" price="150"></div>
-      <div class="seat" row="2" number="3" price="150"></div>
+      <div class="seat occupied" row="2" number="3" price="150"></div>
       <div class="seat" row="2" number="4" price="150"></div>
       <div class="seat" row="2" number="5" price="150"></div>
       <div class="seat" row="2" number="6" price="150"></div>
@@ -313,7 +313,7 @@
       <div class="seat" row="1" number="7" price="150"></div>
       <div class="seat" row="1" number="8" price="150"></div>
       <div class="seat" row="1" number="9" price="150"></div>
-      <div class="seat" row="1" number="10" price="150"></div>
+      <div class="seat occupied" row="1" number="10" price="150"></div>
       <div class="seat" row="1" number="11" price="150"></div>
       <div class="seat" row="1" number="12" price="150"></div>
       <div class="seat" row="1" number="13" price="150"></div>
@@ -329,70 +329,81 @@
     </div>
     <div class="tickets-scene">Сцена</div>
   </div>
-  <div class="tickets-pay">
-    <div class="text">Ваші квитки</div>
-    <div class="your-tickets">
-      <div class="tickets-paycost">
-        <div class="text1">Партер, ряд 2, місце 11</div>
-        <div class="text2">300₴</div>
+  <form
+    class="your-tickets-form"
+    action="{% url 'placingOrder' %}"
+    method="get"
+  >
+    <div style="display: none" class="tickets-pay">
+      <div class="text">Ваші квитки</div>
+      <div class="your-tickets">
+        <div class="your-tickets-line"></div>
+        <div class="tickets-sum">
+          <div class="text1"><span id="tickets-count">2</span> квитки</div>
+          <div class="text2"><span id="result-sum">600</span>₴</div>
+        </div>
       </div>
-      <div class="tickets-paycost">
-        <div class="text1">Партер, ряд 2, місце 12</div>
-        <div class="text2">300₴</div>
-      </div>
-      <div class="your-tickets-line"></div>
-      <div class="tickets-sum">
-        <div class="text1"><span id="tickets-count"></span> квитки</div>
-        <div class="text2"><span id="result-sum"></span>₴</div>
-      </div>
-    </div>
-    <form class="your-tickets-form">
+
       <button type="submit" class="tickets-button">Оформити замовлення</button>
       <div class="order-underline"></div>
-    </form>
-  </div>
+    </div>
+  </form>
 </div>
 
 <script>
   function handleSeatClick(event) {
-    // Get the clicked seat element
     const clickedSeat = event.target;
 
-    // Check if the seat already has the "selected" class
-    if (clickedSeat.classList.contains("selected")) {
-      // Remove the "selected" class from the seat
-      clickedSeat.classList.remove("selected");
-
-      // Remove the dynamically created structure
-      const parent = clickedSeat.nextElementSibling;
-      if (parent && parent.classList.contains("tickets-paycost")) {
-        parent.remove();
+    if (!clickedSeat.classList.contains("occupied")) {
+      if (clickedSeat.classList.contains("selected")) {
+        clickedSeat.classList.remove("selected");
+      } else {
+        clickedSeat.classList.add("selected");
       }
-    } else {
-      // Add the "selected" class to the clicked seat
-      clickedSeat.classList.add("selected");
 
-      // Create a new structure div
-      const newDiv = document.createElement("div");
-      newDiv.className = "tickets-paycost";
-
-      // Create and append child elements to the new div
-      const text1 = document.createElement("div");
-      text1.className = "text1";
-      text1.textContent = "Партер, ряд 2, місце 11";
-      newDiv.appendChild(text1);
-
-      const text2 = document.createElement("div");
-      text2.className = "text2";
-      text2.textContent = "300₴";
-      newDiv.appendChild(text2);
-
-      // Append the new div after the clicked seat
-      clickedSeat.insertAdjacentElement("afterend", newDiv);
+      updateSelectedTickets();
     }
   }
 
-  // Add a click event listener to all elements with the seat class
+  function updateSelectedTickets() {
+    const selectedSeats = document.querySelectorAll(".seat.selected");
+    const ticketsContainer = document.querySelector(".your-tickets");
+    const ticketsCountElement = document.getElementById("tickets-count");
+    const resultSumElement = document.getElementById("result-sum");
+
+    ticketsContainer.innerHTML = "";
+
+    if (selectedSeats.length > 0) {
+      document.querySelector(".tickets-pay").style.display = "flex";
+
+      let totalPrice = 0;
+
+      selectedSeats.forEach(function (seat) {
+        const row = seat.getAttribute("row");
+        const number = seat.getAttribute("number");
+        const price = seat.getAttribute("price");
+
+        const ticketDiv = document.createElement("div");
+        ticketDiv.classList.add("tickets-paycost");
+        ticketDiv.innerHTML = `
+          <div class="text1">Партер, ряд ${row}, місце ${number}</div>
+          <div class="text2">${price}₴</div>
+        `;
+
+        ticketsContainer.appendChild(ticketDiv);
+
+        totalPrice += parseInt(price);
+      });
+
+      ticketsCountElement.textContent = selectedSeats.length;
+      resultSumElement.textContent = totalPrice;
+    } else {
+      document.querySelector(".tickets-pay").style.display = "none";
+      ticketsCountElement.textContent = "0";
+      resultSumElement.textContent = "0";
+    }
+  }
+
   document.querySelectorAll(".seat").forEach(function (seat) {
     seat.addEventListener("click", handleSeatClick);
   });

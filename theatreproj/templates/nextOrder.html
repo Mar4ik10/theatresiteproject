@@ -24,7 +24,7 @@
   <div class="order-form">
     <div class="text">Заповніть форму даними</div>
     <div class="order-form-content">
-      <form method="post">
+      <form method="get" action="{% url 'successPay' %}">
         <div class="group">
           <input type="text" required />
           <span class="highlight"></span>

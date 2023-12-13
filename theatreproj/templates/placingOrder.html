@@ -24,7 +24,7 @@
   <div class="order-form">
     <div class="text">Заповніть форму даними</div>
     <div class="order-form-content">
-      <form method="post">
+      <form method="get" action="{% url 'nextOrder' %}">
         <div class="group">
           <input type="text" required />
           <span class="highlight"></span>
@@ -40,14 +40,14 @@
         </div>
 
         <div class="group">
-          <input type="text" required />
+          <input type="email" required />
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Email</label>
         </div>
 
         <div class="group">
-          <input type="text" required />
+          <input type="tel" required />
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Телефон</label>

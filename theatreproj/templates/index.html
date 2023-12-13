@@ -23,7 +23,7 @@
       {% for show in theatre %}
       <div class="index-card">
         <a href="{% url 'selectTickets' slug=show.slug %}"
-          ><img src="/{{ show.image }}"
+          ><img src="/{{ show.image }}" alt="{{ show.slug }}"
         /></a>
 
         <p>
@@ -38,7 +38,7 @@
   <div class="index-theatre">
     <h1>Про театр</h1>
     <div class="index-row1">
-      <img src="{% static 'image10.png' %}" />
+      <img src="{% static 'image10.png' %}" alt="Про театр" />
       <p>
         <span id="index-theatre-caps">Театр Титанів - </span><br />місце, де
         мистецтво воскрешає богів
