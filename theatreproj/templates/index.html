@@ -11,39 +11,27 @@
   .contentScreen {
     display: block;
   }
+
+  .contact-page {
+    margin: 20px 0;
+  }
 </style>
 <div class="main-index">
   <div class="coming-Soon">
     <h1>Найближчі вистави</h1>
     <div class="index-cards">
+      {% for show in theatre %}
       <div class="index-card">
-        <img src="{% static 'image21.png' %}" />
+        <a href="{% url 'selectTickets' slug=show.slug %}"
+          ><img src="/{{ show.image }}"
+        /></a>
+
         <p>
-          Вт, 3 / 10 / 2023 <br />
-          Королева Сходу
+          {{ show.formatted_date }} <br />
+          {{ show.title }}
         </p>
       </div>
-      <div class="index-card">
-        <img src="{% static 'image22.png' %}" />
-        <p>
-          Сб, 7 / 10 / 2023 <br />
-          Кохання в стилі бароко...
-        </p>
-      </div>
-      <div class="index-card">
-        <img src="{% static 'image23.png' %}" />
-        <p>
-          Нд, 8 / 10 / 2023 <br />
-          Балет Паризької опери
-        </p>
-      </div>
-      <div class="index-card">
-        <img src="{% static 'image24.png' %}" />
-        <p>
-          Пн, 9 / 10 / 2023 <br />
-          Мадам сьогодні п’яна
-        </p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 
@@ -74,6 +62,8 @@
         силу та магію театрального мистецтва.
       </p>
     </div>
+
+    <a href="{% url 'abouttheatre' %}">Більше про історію театру</a>
   </div>
 
   <div class="contact-page">

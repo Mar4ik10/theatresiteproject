@@ -5,7 +5,7 @@ from . import models
 
 def index(request):
     theatshowall = models.TheatreShow.objects.all()
-    return render(request, "index.html")
+    return render(request, "index.html", {"theatre": theatshowall})
 
 def contact(request):
     return render(request, "contact.html")

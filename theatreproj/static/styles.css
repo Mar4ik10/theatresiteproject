@@ -1215,4 +1215,11 @@ header {
   font-weight: 350;
   color: white;
   margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.index-theatre a {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
 }
