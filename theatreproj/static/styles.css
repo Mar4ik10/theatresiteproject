@@ -553,10 +553,11 @@ body {
   width: 1.3rem;
   margin: 3px;
   border-radius: 4px;
+  border: 1px solid white;
   transition: background-color 0.3s;
 }
 
-.cinema-row.row-1 .seat:hover,
+/* .cinema-row.row-1 .seat:hover,
 .cinema-row.row-2 .seat:hover {
   background-color: #4f4e59;
 }
@@ -579,6 +580,35 @@ body {
 .cinema-row.row-12 .seat:hover,
 .cinema-row.row-13 .seat:hover {
   background-color: #a7875c;
+} */
+
+.cinema-row.row-1 .selected,
+.cinema-row.row-2 .selected {
+  background-color: #4f4e59;
+}
+
+.cinema-row.row-3 .selected,
+.cinema-row.row-4 .selected {
+  background-color: #536651;
+}
+
+.cinema-row.row-5 .selected,
+.cinema-row.row-6 .selected,
+.cinema-row.row-7 .selected,
+.cinema-row.row-8 .selected,
+.cinema-row.row-9 .selected {
+  background-color: #6f3b2f;
+}
+
+.cinema-row.row-10 .selected,
+.cinema-row.row-11 .selected,
+.cinema-row.row-12 .selected,
+.cinema-row.row-13 .selected {
+  background-color: #a7875c;
+}
+
+.occupied {
+  background-color: #0e0d0b;
 }
 
 .seat:active {
