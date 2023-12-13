@@ -21,6 +21,23 @@ body {
   font-weight: 400;
 }
 
+header {
+  padding: 3rem;
+}
+
+.contentScreen {
+  display: none;
+}
+
+.contentScreen p {
+  position: absolute;
+  font-family: Alethia Next;
+  font-size: 1.4rem;
+  font-weight: 350;
+  color: white;
+  bottom: calc(30%);
+}
+
 .nav {
   color: white;
   display: flex;
@@ -28,7 +45,6 @@ body {
   font-size: 2rem;
   position: relative;
   height: 78px;
-  margin: 3rem;
 }
 
 .nav .navOpenBtn,
@@ -1112,4 +1128,91 @@ body {
   font-size: 1.3rem;
   font-weight: 350;
   font-family: Alethia Next;
+}
+
+/* ___________________INDEX____________________ */
+
+.main-index {
+  margin: 0 50px;
+}
+
+.coming-Soon {
+  font-family: Alethia Next;
+}
+
+.coming-Soon h1 {
+  font-size: 2rem;
+  font-weight: 350;
+  color: #b5a48d;
+  margin-bottom: 20px;
+}
+
+.index-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.index-card {
+  position: relative;
+  margin: 1rem;
+  width: 22rem;
+  font-family: Alethia Next;
+  font-weight: 350;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.index-card img {
+  width: 100%;
+}
+
+.index-card p {
+  position: absolute;
+  left: calc(5px);
+  bottom: calc(10px);
+}
+
+.index-theatre {
+  font-family: Alethia Next;
+}
+
+.index-theatre h1 {
+  color: #b5a48d;
+  font-size: 2.2rem;
+  font-weight: 350;
+}
+
+.index-row1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.index-row1 img {
+  width: 740px;
+  height: auto;
+}
+
+.index-row1 p {
+  font-size: 1.4rem;
+  font-weight: 350;
+  color: #b5a48d;
+  margin-left: 30px;
+}
+
+#index-theatre-caps {
+  font-size: 5rem;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}
+
+.index-row2 {
+  margin-top: 20px;
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 350;
+  color: white;
+  margin-left: 30px;
 }

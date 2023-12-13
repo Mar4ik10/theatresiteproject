@@ -47,6 +47,13 @@
     height: 270px;
     margin: 50px 0 50px;
   }
+
+  /* _____INDEX_______ */
+  .index-row1 img {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -161,6 +168,28 @@
 
   .order-form .text {
     text-align: center;
+  }
+
+  /* _____INDEX____ */
+
+  .contentScreen p {
+    font-size: 1rem;
+    bottom: calc(40%);
+  }
+
+  .index-row1 p {
+    margin-top: 20px;
+  }
+  #index-theatre-caps {
+    font-size: 2rem;
+  }
+
+  .index-row2 {
+    flex-wrap: wrap;
+  }
+
+  .index-row2 p {
+    margin: 15px 0;
   }
 }
 

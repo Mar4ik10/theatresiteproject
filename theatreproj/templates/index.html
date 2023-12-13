@@ -1,18 +1,126 @@
-{% extends "base.html" %}{% load static %}{% block main %}
-<!-- Coming soon -->
-<div class="comingSoon" alt="cards+H1">
-  <div>
-    <p class="title">Найближчі вистави</p>
-    <div class="cardsContainer" alt="cards">
-      <div class="component21">
-        <img src="{% static 'image1.png' %}" alt="" />
-        <p class="">Вт, 3 / 10 / 2023</p>
-        <p>Королева Сходу</p>
+{% extends "base.html" %}{% load static %} {% block main %}
+<style>
+  header {
+    position: relative;
+    background-image: url("{% static 'image31.png' %}");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 66%;
+  }
+
+  .contentScreen {
+    display: block;
+  }
+</style>
+<div class="main-index">
+  <div class="coming-Soon">
+    <h1>Найближчі вистави</h1>
+    <div class="index-cards">
+      <div class="index-card">
+        <img src="{% static 'image21.png' %}" />
+        <p>
+          Вт, 3 / 10 / 2023 <br />
+          Королева Сходу
+        </p>
       </div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="index-card">
+        <img src="{% static 'image22.png' %}" />
+        <p>
+          Сб, 7 / 10 / 2023 <br />
+          Кохання в стилі бароко...
+        </p>
+      </div>
+      <div class="index-card">
+        <img src="{% static 'image23.png' %}" />
+        <p>
+          Нд, 8 / 10 / 2023 <br />
+          Балет Паризької опери
+        </p>
+      </div>
+      <div class="index-card">
+        <img src="{% static 'image24.png' %}" />
+        <p>
+          Пн, 9 / 10 / 2023 <br />
+          Мадам сьогодні п’яна
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="index-theatre">
+    <h1>Про театр</h1>
+    <div class="index-row1">
+      <img src="{% static 'image10.png' %}" />
+      <p>
+        <span id="index-theatre-caps">Театр Титанів - </span><br />місце, де
+        мистецтво воскрешає богів
+      </p>
+    </div>
+
+    <div class="index-row2">
+      <p>
+        Театр Титанів - це інноваційна мистецька платформа, яка об'єднує
+        традиційний театр і сучасне мистецтво. Вистави цього театру вра-жають не
+        лише візуально і аудіально, але й залишають за собою слід у серцях
+        глядачів, надихаючи їх думати і відчувати глибше. Тут майстерно
+        поєднується різні мистецькі жанри, включаючи драму і танець, гумор і
+        трагедію, хорор і фантазію.
+      </p>
+
+      <p>
+        Театр зачаровує глядачів своєю акторською майстерністю та здатністю
+        створювати непо-вторні театральні враження. Завдяки акто-рам, кожна
+        вистава стає видатною по-дією, де ви зможете відкрити для себе спра-вжню
+        силу та магію театрального мистецтва.
+      </p>
+    </div>
+  </div>
+
+  <div class="contact-page">
+    <h1 class="contact-title">Контакти</h1>
+    <div class="contact-container">
+      <div class="contact-left">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.552174995245!2d30.50602897680915!3d50.46806337159554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce6cbd00fab7%3A0xf5b793dd5a26551f!2z0LLRg9C70LjRhtGPINCp0LXQutCw0LLQuNGG0YzQutCwLCA1LCDQmtC40ZfQsiwg0KPQutGA0LDRl9C90LAsIDAyMDAw!5e0!3m2!1suk!2sde!4v1701382023868!5m2!1suk!2sde"
+          width="600px"
+          height="450px"
+          style="border: 0"
+          allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="contact-right">
+        <div class="contact-address">
+          <h1>Адреса</h1>
+          <p>
+            Україна, 01001, м. Київ-1, вул.Щекавиця<br />5 (ст. метро
+            "Контрактова площа").
+          </p>
+        </div>
+        <div class="contact-kassa">
+          <h1>Каси</h1>
+          <p>
+            +38 (048) 870-15-09 <br />
+            tt.booking@gmail.com
+          </p>
+        </div>
+        <div class="contact-pryimalnia">
+          <h1>Приймальня</h1>
+          <p>
+            +38 (048) 722-22-30 <br />
+            tt.booking@gmail.com
+          </p>
+        </div>
+        <div class="contact-presa">
+          <h1>Для преси</h1>
+          <p>
+            +38 (048) 730-22-30<br />
+            tt.booking@gmail.com
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 {% endblock %}
