@@ -18,8 +18,8 @@ urlpatterns = [
     path("afisha/", views.afisha, name='afisha'),
     re_path(r'^robots\.txt$', TemplateView.as_view(template_name="theatreproj/robots.txt", content_type="text/plain")),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name="django.contrib.sitemaps.views.sitemap"),
-    path("placingOrder/", views.placingOrder, name="placingOrder"),
-    path("nextOrder/", views.nextOrder, name="nextOrder"),
-    path("successPay/", views.successPay, name="successPay"),
+    path("placingOrder/<slug:slug>/", views.placingOrder, name="placingOrder"),
+    path("nextOrder/<slug:slug>/", views.nextOrder, name="nextOrder"),
+    path("successPay/<slug:slug>/", views.successPay, name="successPay"),
     path("infoshow/", views.infoshow, name="infoshow"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

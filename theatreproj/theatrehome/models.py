@@ -55,9 +55,4 @@ class BookedSeats(models.Model):
     show = models.ForeignKey(TheatreShow, on_delete=models.CASCADE)
     seat = models.ForeignKey(Seat, on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
-    surname = models.CharField(max_length=255)
-    email = models.EmailField(max_length=255)
-    phonenumber = models.CharField(max_length=255)
-    
-    name_card = models.CharField(max_length=255)
     

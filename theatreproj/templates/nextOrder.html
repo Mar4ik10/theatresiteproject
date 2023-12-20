@@ -7,12 +7,12 @@
   }
 </style>
 
-<div class="tickets-title">Кохання в стилі бароко, або любов з неохоти</div>
+<div class="tickets-title">{{ theatre.title }}</div>
 <div class="tickets-header">
   <div class="tickets-info">
-    <div class="tickets-date">Сб, 7 / 10 / 2023 | 18:00-20:00</div>
-    <div class="tickets-genre">Комедія-фарс | Основна сцена | 2 дії</div>
-    <div class="tickets-author">Ярослав Стельмах</div>
+    <div class="tickets-date">{{ theatre.formatted_date }} | {{ theatre.formatted_time }}</div>
+    <div class="tickets-genre">{{ theatre.genre }} | {{ theatre.typescene}} | {{ theatre.num_scene }} дії</div>
+    <div class="tickets-author">{{ theatre.author }}</div>
   </div>
   <div class="tickets-steps">
     <div class="progress-text">Вибір квитків</div>
@@ -24,9 +24,10 @@
   <div class="order-form">
     <div class="text">Заповніть форму даними</div>
     <div class="order-form-content">
-      <form method="get" action="{% url 'successPay' %}">
+      <form method="post" action="{% url 'successPay' slug=theatre.slug %}">
+        {% csrf_token %}
         <div class="group">
-          <input type="text" required />
+          <input type="text" name="buyer_name" required />
           <span class="highlight"></span>
           <span class="bar"></span>
           <label>Ім'я</label>
@@ -70,6 +71,10 @@
           </button>
           <div style="width: 100px" class="order-form-underline"></div>
         </div>
+        {% for seat in seats %}
+        <input type="hidden" name="selected_seats[]" value="{{ seat.row }}-{{ seat.number }}-{{ seat.value }}">
+        {% endfor %}
+
       </form>
     </div>
   </div>
@@ -81,21 +86,21 @@
     <div class="your-tickets">
       <div style="width: 320px" class="tickets-paycost">
         <div class="text1">Назва</div>
-        <div class="text2">Кохання в стилі бароко..</div>
+        <div class="text2">{{ theatre.title }}</div>
       </div>
       <div style="width: 320px" class="tickets-paycost">
         <div class="text1">Дата</div>
-        <div class="text2">Сб, 7 / 10 / 2023 | 18:00-20:00</div>
+        <div class="text2">{{ theatre.formatted_date }} | {{ theatre.formatted_time }}</div>
       </div>
 
       <div style="width: 320px" class="tickets-paycost">
         <div class="text1">Включено</div>
-        <div class="text2">2 квитки</div>
+        <div class="text2">{{ num_tickets }} квитки</div>
       </div>
       <br />
       <div style="width: 320px" class="tickets-sum">
         <div class="text1"><b>Всього</b></div>
-        <div class="text2">600₴</div>
+        <div class="text2">{{ generalsum }}₴</div>
       </div>
     </div>
   </div>

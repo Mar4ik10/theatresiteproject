@@ -7,12 +7,12 @@
   }
 </style>
 
-<div class="tickets-title">Кохання в стилі бароко, або любов з неохоти</div>
+<div class="tickets-title">{{ theatre.title }}</div>
 <div class="tickets-header">
   <div class="tickets-info">
-    <div class="tickets-date">Сб, 7 / 10 / 2023 | 18:00-20:00</div>
-    <div class="tickets-genre">Комедія-фарс | Основна сцена | 2 дії</div>
-    <div class="tickets-author">Ярослав Стельмах</div>
+    <div class="tickets-date">{{ theatre.formatted_date }} | {{ theatre.formatted_time }}</div>
+    <div class="tickets-genre">{{ theatre.genre }} | {{ theatre.typescene}} | {{ theatre.num_scene }} дії</div>
+    <div class="tickets-author">{{ theatre.author }}</div>
   </div>
   <div class="tickets-steps">
     <div class="progress-text">Вибір квитків</div>
@@ -24,7 +24,8 @@
   <div class="order-form">
     <div class="text">Заповніть форму даними</div>
     <div class="order-form-content">
-      <form method="get" action="{% url 'nextOrder' %}">
+      <form method="post" action="{% url 'nextOrder' slug=theatre.slug %}">
+        {% csrf_token %}
         <div class="group">
           <input type="text" required />
           <span class="highlight"></span>
@@ -57,28 +58,29 @@
           <button class="order-form-button-pay">Перейти до оплати</button>
           <div class="order-form-underline"></div>
         </div>
-      </form>
+
     </div>
   </div>
 
   <div class="tickets-pay">
     <div class="text">Ваші квитки</div>
     <div class="your-tickets">
+      {% for seat in seats %}
       <div class="tickets-paycost">
-        <div class="text1">Партер, ряд 2, місце 11</div>
-        <div class="text2">300₴</div>
+
+        <div class="text1">Партер, ряд {{ seat.row }}, місце {{ seat.number }}</div>
+        <div class="text2">{{ seat.value }}₴</div>
+        <input type="hidden" name="selected_seats[]" value="{{ seat.row }}-{{ seat.number }}-{{ seat.value }}">
       </div>
-      <div class="tickets-paycost">
-        <div class="text1">Партер, ряд 2, місце 12</div>
-        <div class="text2">300₴</div>
-      </div>
+      {% endfor %}
       <div class="your-tickets-line"></div>
       <div class="tickets-sum">
-        <div class="text1">2 квитки</div>
-        <div class="text2">600₴</div>
+        <div class="text1">{{ num_tickets }} квитки</div>
+        <div class="text2">{{ generalsum }}₴</div>
       </div>
     </div>
   </div>
+  </form>
 </div>
 
 {% endblock %}

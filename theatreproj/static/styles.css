@@ -1146,11 +1146,13 @@ header {
   font-size: 1.3rem;
   font-weight: 350;
   font-family: Alethia Next;
+  margin: 10px 0;
 }
 
 .success-center .success-ticket {
   margin: 50px 0;
-  outline: #b5a48d 1px solid;
+  border: #b5a48d 1px solid;
+  padding: 0 10px;
 }
 
 /* ___________________INDEX____________________ */
