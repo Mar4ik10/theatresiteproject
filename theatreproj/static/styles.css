@@ -1142,10 +1142,15 @@ header {
 }
 
 .success-center h2 {
-  color: #b5a48d;
+  color: white;
   font-size: 1.3rem;
   font-weight: 350;
   font-family: Alethia Next;
+}
+
+.success-center .success-ticket {
+  margin: 50px 0;
+  outline: #b5a48d 1px solid;
 }
 
 /* ___________________INDEX____________________ */
@@ -1247,7 +1252,8 @@ header {
 
 .infoshow-container {
   display: flex;
-  justify-content: space-evenly;
+  margin: 0 20px;
+  justify-content: center;
 }
 
 .infoshow-container .info-text {

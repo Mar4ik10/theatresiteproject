@@ -1,6 +1,7 @@
 @import "styles.css";
 
 @media screen and (max-width: 977px) {
+
   /* _________SELECT TICKETS________*/
   .mainTickets {
     justify-content: center;
@@ -30,10 +31,12 @@
 }
 
 @media screen and (max-width: 900px) {
+
   /* _________CONTACTS_______ */
   .contact-container {
     flex-direction: column;
   }
+
   .contact-left {
     align-self: center;
   }
@@ -42,6 +45,7 @@
     margin-left: 0;
     margin-top: 20px;
   }
+
   .contact-left iframe {
     width: 400px;
     height: 270px;
@@ -66,6 +70,7 @@
   .tickets-seats {
     margin: 0;
   }
+
   .timeline-items::before {
     left: 11px;
   }
@@ -98,9 +103,16 @@
     flex-direction: column;
     align-items: center;
   }
+
+  /* _____INFOSHOW____ */
+
+  .infoshow-container {
+    flex-wrap: wrap;
+  }
 }
 
 @media only screen and (max-width: 500px) {
+
   /* ____HEADER___ */
   .title-nav-row2 {
     display: none !important;
@@ -125,6 +137,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .main-afisha {
     margin: 0;
   }
@@ -180,6 +193,7 @@
   .index-row1 p {
     margin-top: 20px;
   }
+
   #index-theatre-caps {
     font-size: 2rem;
   }
@@ -199,9 +213,15 @@
     height: 100%;
     aspect-ratio: 4/3;
   }
+
+  .infoshow-container .info-img img {
+    width: 300px;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 400px) {
+
   /* ____HEADER__ */
   .title-nav {
     font-size: 0.9em;

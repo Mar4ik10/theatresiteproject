@@ -1,136 +1,134 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    />
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'responsive.css' %}" />
 
-  </head>
-  <body>
-    <header>
-      <nav class="nav">
-        <i class="uil uil-bars navOpenBtn"></i>
-        <ul class="nav-links">
-          <i class="uil uil-times navCloseBtn" style="font-size: 2rem"></i>
-          <p>Меню</p>
-          <li><a href="{% url 'index' %}">Головна</a></li>
-          <li><a href="{% url 'afisha' %}">Афіша</a></li>
-          <li><a href="{% url 'abouttheatre' %}">Про театр</a></li>
-          <li><a href="#">Новини</a></li>
-          <li><a href="{% url 'contact' %}">Контакти</a></li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <div class="title-nav">
-          <div class="title-nav-row1">Театр титанів</div>
-          <div class="title-nav-row2">Київ | 1918</div>
-        </div>
-        <i class="uil uil-search search-icon" id="searchIcon"></i>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'responsive.css' %}" />
 
-        <div class="search-box">
-          <form action="{% url 'afisha' %}" method="get">
-            {% csrf_token %}
-            <input type="hidden" name="form_type" value="search_form">
-            <button
-              class="uil uil-search search-icon"
-              style="
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <i class="uil uil-bars navOpenBtn"></i>
+      <ul class="nav-links">
+        <i class="uil uil-times navCloseBtn" style="font-size: 2rem"></i>
+        <p>Меню</p>
+        <li><a href="{% url 'index' %}">Головна</a></li>
+        <li><a href="{% url 'afisha' %}">Афіша</a></li>
+        <li><a href="{% url 'abouttheatre' %}">Про театр</a></li>
+        <li><a href="#">Новини</a></li>
+        <li><a href="{% url 'contact' %}">Контакти</a></li>
+      </ul>
+
+      <div class="title-nav">
+        <div class="title-nav-row1">Театр титанів</div>
+        <div class="title-nav-row2">Київ | 1918</div>
+      </div>
+      <i class="uil uil-search search-icon" id="searchIcon"></i>
+
+      <div class="search-box">
+        <form action="{% url 'afisha' %}" method="get">
+          {% csrf_token %}
+          <input type="hidden" name="form_type" value="search_form">
+          <button class="uil uil-search search-icon" style="
                 background-color: transparent;
                 color: white;
                 overflow: hidden;
                 border: white;
-              "
-              type="submit"
-            ></button>
-            <input
-              type="search-input"
-              name="search"
-              placeholder="Пошук..."
-            />
-          </form>
-        </div>
-      </nav>
-      <div class="contentScreen">
-        <p>7 / 10 / 2023 <br>
-          Прем’єра Барокової Інтриги: <br> “Кохання в стилі бароко, або любов з неохоти”
-        </p>
+              " type="submit"></button>
+          <input type="search-input" name="search" placeholder="Пошук..." />
+        </form>
       </div>
-    </header>
+    </nav>
+    <div class="contentScreen">
+      <p>7 / 10 / 2023 <br>
+        Прем’єра Барокової Інтриги: <br> “Кохання в стилі бароко, або любов з неохоти”
+      </p>
+    </div>
+  </header>
 
-    <main>{% block main %}{% endblock %}</main>
+  <main>{% block main %}{% endblock %}</main>
 
-    <footer>
-      <hr style="border-color: #b5a48d" />
-      <div class="footer-container">
-        <div class="hidden-footer-center">
+  <footer>
+    <hr style="border-color: #b5a48d" />
+    <div class="footer-container">
+      <div class="hidden-footer-center">
+        <div>Театр Титанів</div>
+        <div>Київ | 1918</div>
+      </div>
+      <div class="footer-above">
+
+        <ul class="footer-left">
+          <li>
+            <h4>Сторінки</h4>
+          </li>
+          <li><a href="{% url 'index' %}">Головна</a></li>
+          <li><a href="{% url 'afisha' %}">Афіша</a></li>
+          <li><a href="{% url 'abouttheatre' %}">Про Театр</a></li>
+          <li><a href="#">Новини</a></li>
+          <li><a href="{% url 'contact' %}">Контакти</a></li>
+        </ul>
+        <div class="footer-center">
           <div>Театр Титанів</div>
           <div>Київ | 1918</div>
         </div>
-        <div class="footer-above">
-          
-          <ul class="footer-left">
-            <li><h4>Сторінки</h4></li>
-            <li><a href="{% url 'index' %}">Головна</a></li>
-            <li><a href="{% url 'afisha' %}">Афіша</a></li>
-            <li><a href="{% url 'abouttheatre' %}">Про Театр</a></li>
-            <li><a href="#">Новини</a></li>
-            <li><a href="{% url 'contact' %}">Контакти</a></li>
-          </ul>
-          <div class="footer-center">
-            <div>Театр Титанів</div>
-            <div>Київ | 1918</div>
-          </div>
-          <ul class="footer-right">
-            <li><h4>Мережі</h4></li>
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">WhatsApp</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="#">X</a></li>
-          </ul>
+        <ul class="footer-right">
+          <li>
+            <h4>Мережі</h4>
+          </li>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">X</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-prescriptions">
+        <div class="left-container">
+          <p class=>©2023 Театр Титанів. Всі права захищені.</p>
         </div>
 
-        <div class="footer-prescriptions">
-          <div class="left-container"><p class=>©2023 Театр Титанів. Всі права захищені.</p></div>
-          
-          <div class="right-container">
-            <p>Privacy</p>
-            <p class=>Cookies</p>
-          </div>
+        <div class="right-container">
+          <p>Privacy</p>
+          <p class=>Cookies</p>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script>
-      const nav = document.querySelector(".nav"),
-        navOpenBtn = document.querySelector(".navOpenBtn"),
-        navCloseBtn = document.querySelector(".navCloseBtn"),
-        searchIcon = document.querySelector("#searchIcon");
+  <script>
+    const nav = document.querySelector(".nav"),
+      navOpenBtn = document.querySelector(".navOpenBtn"),
+      navCloseBtn = document.querySelector(".navCloseBtn"),
+      searchIcon = document.querySelector("#searchIcon");
 
-      navOpenBtn.addEventListener("click", () => {
-        nav.classList.add("openNav");
-        nav.classList.remove("openSearch");
+    navOpenBtn.addEventListener("click", () => {
+      nav.classList.add("openNav");
+      nav.classList.remove("openSearch");
+      searchIcon.classList.replace("uil-times", "uil-search");
+    });
+
+    navCloseBtn.addEventListener("click", () => {
+      nav.classList.remove("openNav");
+    });
+
+    searchIcon.addEventListener("click", () => {
+      nav.classList.toggle("openSearch");
+      nav.classList.remove("openNav");
+      if (nav.classList.contains("openSearch")) {
+        searchIcon.classList.replace("uil-search", "uil-times");
+      } else {
         searchIcon.classList.replace("uil-times", "uil-search");
-      });
+      }
+    });
+  </script>
+</body>
 
-      navCloseBtn.addEventListener("click", () => {
-        nav.classList.remove("openNav");
-      });
-
-      searchIcon.addEventListener("click", () => {
-        nav.classList.toggle("openSearch");
-        nav.classList.remove("openNav");
-        if (nav.classList.contains("openSearch")) {
-          searchIcon.classList.replace("uil-search", "uil-times");
-        } else {
-          searchIcon.classList.replace("uil-times", "uil-search");
-        }
-      });
-    </script>
-  </body>
 </html>
