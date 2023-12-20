@@ -1,4 +1,12 @@
-{% extends "base.html" %}{% load static %}{% block main %}
+{% extends "base.html" %}
+<html>
+<meta name="keywords" content="вистави, розваги, Київ, афіша" />
+<meta name="description"
+  content="Офіційний сайт Театру Титанів у місті Київ вул.Щекавиця, 5 (ст. метро 'Контрактова площа')" />
+<title>Афіша</title>
+
+</html>
+{% load static %}{% block main %}
 <div class="main-afisha">
   <div class="row1-afisha">
     <h1 class="header-afisha">Афіша</h1>
@@ -36,6 +44,7 @@
         </p>
         <p class="author-afisha">{{ show.author }}</p>
         <p class="title-afisha">{{ show.title }}</p>
+        <a href="{% url 'infoshow' %}">Інформація</a>
       </div>
       <a href="{% url 'selectTickets' slug=show.slug %}">КУПИТИ КВИТОК</a>
     </div>

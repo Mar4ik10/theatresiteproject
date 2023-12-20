@@ -61,4 +61,3 @@ class BookedSeats(models.Model):
     
     name_card = models.CharField(max_length=255)
     
-    

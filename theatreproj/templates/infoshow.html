@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+<html>
+<meta name="keywords" content="вистава, Королева, Схід" />
+<meta name="description" content="Неймовірна вистава {{ theatre.title }}" />
+<title>{{ theatre.title }}</title>
+
+</html>
+{% load static %}{% block main %}
+<div class="infoshow-container">
+  <div class="info-text">
+    <h1>Королева Сходу</h1>
+    <p>Королева Сходу - класичний приклад комедії-фарсу. Молодий граф, великий жартівник і гульвіса прямо посеред
+      черго-вого гуляння одержує звістку про швидкий приїзд нареченої. Причому, згідно із запо-вітом, ухилитися від
+      шлюбу йому ніяк не можна: в іншому випадку з спадщини графу не дістанеться ні копійки. </p>
+  </div>
+  <div class="info-img">
+    <img src="/public/theatreimages/image1.png" alt="Королева Сходу">
+  </div>
+</div>
+{% endblock %}

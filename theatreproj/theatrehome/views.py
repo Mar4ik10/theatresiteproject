@@ -64,3 +64,6 @@ def nextOrder(request):
 
 def successPay(request):
     return render(request, "successPay.html")
+
+def infoshow(request):
+    return render(request, "infoshow.html")

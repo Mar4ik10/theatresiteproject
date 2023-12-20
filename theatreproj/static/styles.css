@@ -60,6 +60,7 @@ header {
 .nav .navOpenBtn:hover {
   color: #b5a48d;
 }
+
 .nav .navCloseBtn:hover {
   color: #b5a48d;
 }
@@ -222,6 +223,7 @@ header {
 .footer-left a {
   float: left;
 }
+
 .footer-right a {
   float: right;
 }
@@ -853,6 +855,11 @@ header {
   display: block;
 }
 
+.card-afisha .details-card-afisha a {
+  padding: 0;
+  outline: none;
+}
+
 .date-afisha,
 .genres-afisha,
 .title-afisha {
@@ -896,6 +903,9 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+
+
 /*------------------------placing_order--------------------*/
 
 .order-tickets {
@@ -962,8 +972,8 @@ header {
   transition: 0.2s ease all;
 }
 
-.order-form-content input:focus ~ label,
-.order-form-content input:valid ~ label {
+.order-form-content input:focus~label,
+.order-form-content input:valid~label {
   top: -20px;
   font-size: 14px;
   color: #b5a48d;
@@ -974,6 +984,7 @@ header {
   display: block;
   width: 300px;
 }
+
 .bar:before,
 .bar:after {
   content: "";
@@ -986,15 +997,17 @@ header {
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
 }
+
 .bar:before {
   left: 50%;
 }
+
 .bar:after {
   right: 50%;
 }
 
-.order-form-content input:focus ~ .bar:before,
-.order-form-content input:focus ~ .bar:after {
+.order-form-content input:focus~.bar:before,
+.order-form-content input:focus~.bar:after {
   width: 50%;
 }
 
@@ -1006,7 +1019,7 @@ header {
   opacity: 0.5;
 }
 
-.order-form-content input:focus ~ .order-form-content .highlight {
+.order-form-content input:focus~.order-form-content .highlight {
   -webkit-animation: inputHighlighter 0.3s ease;
   -moz-animation: inputHighlighter 0.3s ease;
   animation: inputHighlighter 0.3s ease;
@@ -1016,24 +1029,29 @@ header {
   from {
     background: #b5a48d;
   }
+
   to {
     width: 0;
     background: transparent;
   }
 }
+
 @-moz-keyframes inputHighlighter {
   from {
     background: #b5a48d;
   }
+
   to {
     width: 0;
     background: transparent;
   }
 }
+
 @keyframes inputHighlighter {
   from {
     background: #b5a48d;
   }
+
   to {
     width: 0;
     background: transparent;
@@ -1222,4 +1240,34 @@ header {
   color: white;
   font-size: 1.2rem;
   line-height: 1.2rem;
+}
+
+
+/* ___________INFO SHOW_____________ */
+
+.infoshow-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.infoshow-container .info-text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.infoshow-container .info-text h1 {
+  font-family: "Alethia Next";
+  font-size: 2.4rem;
+  font-weight: 350;
+}
+
+.infoshow-container .info-text p {
+  font-family: "Satoshi";
+  margin-top: 50px;
+}
+
+.infoshow-container .info-img img {
+  width: 400px;
+  height: auto;
 }
