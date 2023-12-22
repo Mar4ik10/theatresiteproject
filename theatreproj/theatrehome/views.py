@@ -51,7 +51,6 @@ def selectTickets(request, slug):
     theatshow = models.TheatreShow.objects.get(slug=slug)
     seats = models.Seat.objects.order_by("-row", "seat_no").all()
     rows = models.Row.objects.order_by("-id").all()
-    print(seats)
     return render(request, "selectTickets.html", {
         "theatre": theatshow, "seats":seats, "rows":rows
     })

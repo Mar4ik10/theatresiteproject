@@ -700,7 +700,7 @@ header {
   background-color: rgba(231, 30, 191, 0);
 }
 
-.tickets-paycost {
+.ticket-paycost {
   display: flex;
   width: 289px;
   height: 20px;

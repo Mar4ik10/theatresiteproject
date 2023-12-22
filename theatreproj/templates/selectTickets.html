@@ -55,25 +55,30 @@
     <div class="cinema-row row-{{ row.id }}">
       <div class="seat-number-left">{{ row.id }}</div>
       {% for seat in seats %}
-        {% if seat.row.id == row.id%}
-        <div class="seat" row="{{ seat.row.id }}" number="{{ seat.seat_no }}" price="{{ seat.row.price }}"></div>
+      {% if seat.row.id == row.id%}
+      <div class="seat" row="{{ seat.row.id }}" number="{{ seat.seat_no }}" price="{{ seat.row.price }}"></div>
 
-        {% endif %}
+      {% endif %}
       {% endfor %}
       <div class="seat-number-right">{{ row.id }}</div>
     </div>
-    
+
     {% endfor %}
+
     <div class="tickets-scene">Сцена</div>
   </div>
   <form class="your-tickets-form" action="{% url 'placingOrder' slug=theatre.slug %}" method="get">
-    <div style="display: none" class="tickets-pay">
+    <div style="display: none;" class="tickets-pay">
       <div class="text">Ваші квитки</div>
       <div class="your-tickets">
+        <div class="tickets-paycost">
+
+        </div>
+
         <div class="your-tickets-line"></div>
         <div class="tickets-sum">
-          <div class="text1"><span id="tickets-count">2</span> квитки</div>
-          <div class="text2"><span id="result-sum">600</span>₴</div>
+          <div class="text1"><span id="tickets-count"></span> квитки</div>
+          <div class="text2"><span id="result-sum"></span>₴</div>
         </div>
       </div>
 
@@ -83,8 +88,62 @@
   </form>
 </div>
 
-
 <script>
+
+  function handleSeatClick(event) {
+    const clickedSeat = event.target;
+
+    clickedSeat.classList.toggle("selected");
+
+    updateSeats();
+  }
+
+  function updateSeats() {
+    var selectedSeats = document.querySelectorAll(".seat.selected:not(.occupied)");
+    var ticketsCount = document.getElementById("tickets-count");
+    var resultSum = document.getElementById("result-sum");
+    var ticketsContainer = document.querySelector(".tickets-paycost");
+
+    ticketsContainer.innerHTML = "";
+    resultSum.textContent = "";
+    ticketsCount.textContent = "";
+
+
+
+    if (selectedSeats.length > 0) {
+      document.querySelector(".tickets-pay").style.display = "flex";
+      var totalprice = 0;
+      selectedSeats.forEach(selectedSeat => {
+        var price = parseInt(selectedSeat.getAttribute("price"));
+        var number = parseInt(selectedSeat.getAttribute("number"));
+        var row = parseInt(selectedSeat.getAttribute("row"));
+
+
+        const ticketDiv = document.createElement("div");
+        ticketDiv.classList.add("ticket-paycost")
+        ticketDiv.innerHTML = `
+        <div class="text1">Партер, ряд ${row}, місце ${number}</div>
+        <div class="text2">${price}₴</div>
+        <input type="hidden" name="selected_seats[]" value="${row}-${number}-${price}">
+        `;
+
+        ticketsContainer.appendChild(ticketDiv);
+
+        totalprice += price;
+        resultSum.textContent = totalprice;
+        ticketsCount.textContent = selectedSeats.length;
+      });
+    }
+    else {
+      document.querySelector(".tickets-pay").style.display = "none";
+    }
+  }
+
+  document.querySelectorAll(".seat:not(.occupied)").forEach((seat) => {
+    seat.addEventListener("click", handleSeatClick)
+  })
+</script>
+<!-- <script>
   function handleSeatClick(event) {
     const clickedSeat = event.target;
 
@@ -142,5 +201,5 @@
   document.querySelectorAll(".seat").forEach(function (seat) {
     seat.addEventListener("click", handleSeatClick);
   });
-</script>
+</script> -->
 {% endblock %}
