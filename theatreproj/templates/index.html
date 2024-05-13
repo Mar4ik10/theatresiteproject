@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 <html>
-  <meta name="keywords" content="історія, театр, вистави, розваги, Київ, афіша, контакти" />
-    <meta
-      name="description"
-      content="Офіційний сайт Театру Титанів у місті Київ вул.Щекавиця, 5 (ст. метро 'Контрактова площа')"
-    />
-    <title>Театр титанів</title>
+<meta name="keywords" content="історія, театр, вистави, розваги, Київ, афіша, контакти" />
+<meta name="description"
+  content="Офіційний сайт Театру Титанів у місті Київ вул.Щекавиця, 5 (ст. метро 'Контрактова площа')" />
+<title>Театр титанів</title>
+
 </html>
 {% load static %} {% block main %}
 <style>
@@ -31,9 +30,7 @@
     <div class="index-cards">
       {% for show in theatre %}
       <div class="index-card">
-        <a href="{% url 'selectTickets' slug=show.slug %}"
-          ><img src="/{{ show.image }}" alt="{{ show.slug }}"
-        /></a>
+        <a href="{% url 'selectTickets' slug=show.slug %}"><img src="/{{ show.image }}" alt="{{ show.slug }}" /></a>
 
         <p>
           {{ show.formatted_date }} <br />
@@ -81,12 +78,8 @@
       <div class="contact-left">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.552174995245!2d30.50602897680915!3d50.46806337159554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce6cbd00fab7%3A0xf5b793dd5a26551f!2z0LLRg9C70LjRhtGPINCp0LXQutCw0LLQuNGG0YzQutCwLCA1LCDQmtC40ZfQsiwg0KPQutGA0LDRl9C90LAsIDAyMDAw!5e0!3m2!1suk!2sde!4v1701382023868!5m2!1suk!2sde"
-          width="600px"
-          height="450px"
-          style="border: 0"
-          allowfullscreen=""
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+          width="600px" height="450px" style="border: 0" allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="contact-right">
         <div class="contact-address">

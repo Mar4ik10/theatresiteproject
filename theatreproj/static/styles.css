@@ -76,7 +76,7 @@ header {
   z-index: 100;
   font-family: "Alethia Next";
   flex-direction: column;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
 }
 
 .nav.openNav .nav-links {
@@ -736,6 +736,7 @@ header {
   margin: 10px auto 0 auto;
   color: #ffffff;
   background-color: inherit;
+  cursor: pointer;
   border: none;
 }
 
