@@ -55,14 +55,12 @@
     <div class="cinema-row row-{{ row.id }}">
       <div class="seat-number-left">{{ row.id }}</div>
       {% for seat in seats %}
-      {% if seat.row.id == row.id%}
-      <div class="seat" row="{{ seat.row.id }}" number="{{ seat.seat_no }}" price="{{ seat.row.price }}"></div>
-
+      {% if seat.row.id == row.id %}
+      <div class="seat {% if seat.id in booked_seat_ids %}occupied{% endif %}" row="{{ seat.row.id }}" number="{{ seat.seat_no }}" price="{{ row.price }}"></div>
       {% endif %}
       {% endfor %}
       <div class="seat-number-right">{{ row.id }}</div>
     </div>
-
     {% endfor %}
 
     <div class="tickets-scene">Сцена</div>

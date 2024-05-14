@@ -627,6 +627,7 @@ header {
 
 .occupied {
   background-color: #0e0d0b;
+  cursor: not-allowed;
 }
 
 .seat:active {
