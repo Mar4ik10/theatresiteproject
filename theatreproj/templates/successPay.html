@@ -3,23 +3,37 @@
 <div class="success-center">
   <h1>Платіж надіслано!</h1>
 
-  <svg width="101" height="100" viewBox="0 0 101 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd"
+  <svg
+    width="101"
+    height="100"
+    viewBox="0 0 101 100"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
       d="M50.5 95C75.3528 95 95.5 74.8528 95.5 50C95.5 25.1472 75.3528 5 50.5 5C25.6472 5 5.5 25.1472 5.5 50C5.5 74.8528 25.6472 95 50.5 95ZM50.5 100C78.1143 100 100.5 77.6143 100.5 50C100.5 22.3857 78.1143 0 50.5 0C22.8857 0 0.5 22.3857 0.5 50C0.5 77.6143 22.8857 100 50.5 100Z"
-      fill="#B5A48D" />
-    <path fill-rule="evenodd" clip-rule="evenodd"
+      fill="#B5A48D"
+    />
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
       d="M76.6921 27.6764C77.6975 28.6459 77.7751 30.3008 76.8654 31.3723L44.0833 70L24.2597 49.8271C23.2791 48.8291 23.2431 47.1726 24.179 46.1272C25.1151 45.0818 26.6689 45.0434 27.6495 46.0414L43.8258 62.503L73.2253 27.8612C74.1348 26.7896 75.687 26.7066 76.6921 27.6764Z"
-      fill="#B5A48D" />
+      fill="#B5A48D"
+    />
   </svg>
 
   <div class="success-tickets">
     {% for seat in seats %}
     <div class="success-ticket">
-      <h2 style="text-align: center;">{{ theatre.title }}</h2>
-      <hr style="border: #b5a48d 1px solid;">
+      <h2 style="text-align: center">{{ theatre.title }}</h2>
+      <hr style="border: #b5a48d 1px solid" />
       <div style="width: 320px" class="tickets-paycost">
         <div class="text1">Дата</div>
-        <div class="text2">{{ theatre.formatted_date }} | {{ theatre.formatted_time }}</div>
+        <div class="text2">
+          {{ theatre.formatted_date }} | {{ theatre.formatted_time }}
+        </div>
       </div>
 
       <div style="width: 320px" class="tickets-paycost">
@@ -37,13 +51,30 @@
         <div class="text2">{{ seat.value }}</div>
       </div>
 
-      <a style="text-align: center; color:white; display: flex; justify-content: center; margin: 10px auto"
-        href="#">Роздрукувати квиток</a>
+      <a
+        style="
+          text-align: center;
+          color: white;
+          display: flex;
+          justify-content: center;
+          margin: 10px auto;
+        "
+        href="#"
+        >Роздрукувати квиток</a
+      >
+      <a
+        style="
+          text-align: center;
+          color: white;
+          display: flex;
+          justify-content: center;
+          margin: 10px auto;
+        "
+        href="{% url 'edit_purchase' slug=theatre.slug %}"
+        >Edit</a
+      >
     </div>
     {% endfor %}
-
-
-
   </div>
 </div>
 

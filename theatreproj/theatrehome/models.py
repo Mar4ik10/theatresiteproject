@@ -46,6 +46,7 @@ class TheatreShow(models.Model):
 class Row(models.Model):
     price = models.IntegerField()
 
+
 class Seat(models.Model):
     seat_no = models.IntegerField()
     row = models.ForeignKey(Row, on_delete=models.CASCADE)

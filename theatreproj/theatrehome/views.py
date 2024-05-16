@@ -102,5 +102,9 @@ def successPay(request, slug):
     
     return render(request, "successPay.html", {'buyer_name':name,'theatre':theatshow, 'generalsum':generalsum, 'seats':seats, 'num_tickets':num_tickets})
 
+
+def edit_purchase(request, slug):
+    pass
+
 def infoshow(request):
     return render(request, "infoshow.html")
