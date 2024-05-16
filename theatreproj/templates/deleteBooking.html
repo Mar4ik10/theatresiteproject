@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block main %}
+<div
+  class="delete-confirmation-container"
+  style="text-align: center; margin: 50px auto; max-width: 500px"
+>
+  <h1 style="color: #8a8a8a; margin-bottom: 20px">Підтвердьте видалення</h1>
+  <p style="font-size: 18px; color: #ffffff">
+    Ви впевнені, що хочете видалити своє бронювання?
+  </p>
+
+  <form method="post" style="margin-top: 30px">
+    {% csrf_token %}
+    <input type="hidden" name="_method" value="DELETE" />
+    <button
+      type="submit"
+      style="
+        background-color: #a56120;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-right: 10px;
+      "
+    >
+      Так, видалити
+    </button>
+    <a
+      href="{% url 'selectTickets' slug=slug %}"
+      style="
+        background-color: #555;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 16px;
+      "
+      >Скасувати</a
+    >
+  </form>
+</div>
+{% endblock %}

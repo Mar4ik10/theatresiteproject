@@ -126,5 +126,20 @@ def edit_booked_seat(request, slug, seat_number, row, name):
         form = BookedSeatForm(instance=booked_seat)
     return render(request, 'edit_booked_seat.html', {'form': form})
 
+
+def deleteBooking(request, slug):
+    if request.method == "POST":
+        theatshow = get_object_or_404(TheatreShow, slug=slug)
+        booked_seats = BookedSeats.objects.filter(show=theatshow)
+        
+        if request.POST.get('_method') == 'DELETE':
+            booked_seats.delete()
+            return redirect('deleteSuccess')
+
+    return render(request, 'deleteBooking.html', {'slug': slug})
+
+def deleteSuccess(request):
+    return render(request, 'deleteSuccess.html')
+
 def infoshow(request):
     return render(request, "infoshow.html")

@@ -73,6 +73,17 @@
         href="{% url 'edit_booked_seat' slug=theatre.slug seat_number=seat.booked_seat.seat.seat_no row=seat.booked_seat.seat.row.id name=seat.booked_seat.name %}"
         >Edit</a
       >
+      <a
+        style="
+          text-align: center;
+          color: white;
+          display: flex;
+          justify-content: center;
+          margin: 10px auto;
+        "
+        href="{% url 'deleteBooking' slug=theatre.slug %}"
+        >Повернути кошти</a
+      >
     </div>
     {% endfor %}
   </div>

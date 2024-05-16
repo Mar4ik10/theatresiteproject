@@ -23,4 +23,6 @@ urlpatterns = [
     path("successPay/<slug:slug>/", views.successPay, name="successPay"),
     path("infoshow/", views.infoshow, name="infoshow"),
     path('edit_booked_seat/<slug:slug>/<int:seat_number>/<int:row>/<str:name>/', views.edit_booked_seat, name='edit_booked_seat'),
+    path('delete/<slug:slug>/', views.deleteBooking, name='deleteBooking'),
+    path('delete-success/', views.deleteSuccess, name='deleteSuccess'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
