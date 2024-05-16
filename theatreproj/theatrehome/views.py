@@ -105,21 +105,21 @@ def successPay(request, slug):
 
 
 def edit_booked_seat(request, slug, seat_number, row, name):
-    print(slug, seat_number, row)
     seat = get_object_or_404(Seat, seat_no=seat_number, row_id=row)
-    print(seat)
     theatshow = get_object_or_404(TheatreShow, slug=slug)
-    print(theatshow)
     booked_seat = get_object_or_404(
         BookedSeats,
         show=theatshow,
         name=name,
         seat=seat
     )
-    print(booked_seat)
     if request.method == 'POST':
         form = BookedSeatForm(request.POST, instance=booked_seat)
         if form.is_valid():
+            new_seat_number = form.cleaned_data['new_seat_number']
+            new_row_id = form.cleaned_data['new_row_id']
+            seat = Seat.objects.get(seat_no=new_seat_number, row_id=new_row_id)
+            form.instance.seat = seat
             form.save()
             return redirect('successPay', slug=slug)
     else:

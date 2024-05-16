@@ -1,1 +1,40 @@
-{% extends "base.html" %}{% load static %}{% block main %} {% endblock %}
+{% extends "base.html" %}{% load static %}{% block main %}
+<style>
+  body {
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  h1 {
+    color: #ffa500; /* Orange */
+  }
+  form {
+    margin-top: 20px;
+  }
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+  }
+  button[type="submit"] {
+    background-color: #ffa500; /* Orange */
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button[type="submit"]:hover {
+    background-color: #ff8c00; /* Darker Orange */
+  }
+</style>
+<h1>Edit Booked Seat</h1>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Save Changes</button>
+</form>
+{% endblock %}
