@@ -1,5 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from .models import TheatreShow, Seat, Row, BookedSeats
+from .forms import BookedSeatForm
+
 
 def index(request):
     theatshowall = TheatreShow.objects.all()
@@ -83,8 +85,6 @@ def successPay(request, slug):
     theatshow = TheatreShow.objects.get(slug=slug)
     a = request.POST.getlist("selected_seats[]")
     name = request.POST.get("buyer_name")
-    print(name)
-    print(a)
     num_tickets = len(a)
     seats = []
     generalsum = 0
@@ -97,14 +97,34 @@ def successPay(request, slug):
         booked_seat = BookedSeats(show=theatshow, seat=seat, name=name)
         booked_seat.save()
         a = {'row':row_id, 'number':seat_no, 'value':value}
-        seats.append(a)
+        seats.append({"booked_seat": booked_seat, "value": value})
         generalsum += value
     
-    return render(request, "successPay.html", {'buyer_name':name,'theatre':theatshow, 'generalsum':generalsum, 'seats':seats, 'num_tickets':num_tickets})
+    
+    return render(request, "successPay.html", {'theatre':theatshow, 'generalsum':generalsum, 'seats':seats, 'num_tickets':num_tickets})
 
 
-def edit_purchase(request, slug):
-    pass
+def edit_booked_seat(request, slug, seat_number, row, name):
+    print(slug, seat_number, row)
+    seat = get_object_or_404(Seat, seat_no=seat_number, row_id=row)
+    print(seat)
+    theatshow = get_object_or_404(TheatreShow, slug=slug)
+    print(theatshow)
+    booked_seat = get_object_or_404(
+        BookedSeats,
+        show=theatshow,
+        name=name,
+        seat=seat
+    )
+    print(booked_seat)
+    if request.method == 'POST':
+        form = BookedSeatForm(request.POST, instance=booked_seat)
+        if form.is_valid():
+            form.save()
+            return redirect('successPay', slug=slug)
+    else:
+        form = BookedSeatForm(instance=booked_seat)
+    return render(request, 'edit_booked_seat.html', {'form': form})
 
 def infoshow(request):
     return render(request, "infoshow.html")

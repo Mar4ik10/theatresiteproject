@@ -38,12 +38,12 @@
 
       <div style="width: 320px" class="tickets-paycost">
         <div class="text1">Ряд</div>
-        <div class="text2">{{ seat.row }}</div>
+        <div class="text2">{{ seat.booked_seat.seat.row.id }}</div>
       </div>
 
       <div style="width: 320px" class="tickets-paycost">
         <div class="text1">Місце</div>
-        <div class="text2">{{ seat.number }}</div>
+        <div class="text2">{{ seat.booked_seat.seat_no }}</div>
       </div>
 
       <div style="width: 320px" class="tickets-paycost">
@@ -70,7 +70,7 @@
           justify-content: center;
           margin: 10px auto;
         "
-        href="{% url 'edit_purchase' slug=theatre.slug %}"
+        href="{% url 'edit_booked_seat' slug=theatre.slug seat_number=seat.booked_seat.seat.seat_no row=seat.booked_seat.seat.row.id name=seat.booked_seat.name %}"
         >Edit</a
       >
     </div>

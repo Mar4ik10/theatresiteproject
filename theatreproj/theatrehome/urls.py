@@ -22,5 +22,5 @@ urlpatterns = [
     path("nextOrder/<slug:slug>/", views.nextOrder, name="nextOrder"),
     path("successPay/<slug:slug>/", views.successPay, name="successPay"),
     path("infoshow/", views.infoshow, name="infoshow"),
-    path('edit/<slug:slug>/', views.edit_purchase, name="edit_purchase"),
+    path('edit_booked_seat/<slug:slug>/<int:seat_number>/<int:row>/<str:name>/', views.edit_booked_seat, name='edit_booked_seat'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
